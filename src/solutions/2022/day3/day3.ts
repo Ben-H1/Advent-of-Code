@@ -71,7 +71,6 @@ const part2Solution = (input: string): string => {
 
 export const day3: Day = {
     title: 'Day 3: Rucksack Reorganization',
-    link: '2022/day3',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

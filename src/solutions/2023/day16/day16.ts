@@ -199,7 +199,6 @@ const part2Solution = (input: string): string => {
 
 export const day16: Day = {
     title: 'Day 16: The Floor Will Be Lava',
-    link: '/2023/day16',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

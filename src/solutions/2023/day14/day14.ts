@@ -157,7 +157,6 @@ const part2Solution = (input: string): string => {
 
 export const day14: Day = {
     title: 'Day 14: Parabolic Reflector Dish',
-    link: '/2023/day14',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

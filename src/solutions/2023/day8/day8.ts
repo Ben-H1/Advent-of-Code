@@ -81,7 +81,6 @@ const part2Solution = (input: string): string => {
 
 export const day8: Day = {
     title: 'Day 8: Haunted Wasteland',
-    link: '/2023/day8',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

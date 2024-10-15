@@ -68,7 +68,6 @@ const part2Solution = (input: string): string => {
 
 export const day7: Day = {
     title: 'Day 7: No Space Left On Device',
-    link: '/2022/day7',
     stars: 0,
     part1: {
         description: descriptions.part1Description,

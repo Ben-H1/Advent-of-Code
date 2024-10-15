@@ -101,7 +101,6 @@ const part2Solution = (input: string): string => {
 
 export const day13: Day = {
     title: 'Day 13: Point of Incidence',
-    link: '/2023/day13',
     stars: 1,
     part1: {
         description: descriptions.part1Description,

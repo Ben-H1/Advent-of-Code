@@ -118,7 +118,6 @@ const part2Solution = (input: string): string => {
 
 export const day18: Day = {
     title: 'Day 18: Lavaduct Lagoon',
-    link: '/2023/day18',
     stars: 0,
     part1: {
         description: descriptions.part1Description,

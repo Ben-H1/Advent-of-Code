@@ -12,7 +12,6 @@ const part2Solution = (input: string): string => {
 
 export const day17: Day = {
     title: 'Day 17: Clumsy Crucible',
-    link: '/2023/day17',
     stars: 0,
     part1: {
         description: descriptions.part1Description,

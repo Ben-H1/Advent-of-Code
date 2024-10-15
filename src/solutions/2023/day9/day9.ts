@@ -67,7 +67,6 @@ const part2Solution = (input: string): string => {
 
 export const day9: Day = {
     title: 'Day 9: Mirage Maintenance',
-    link: '/2023/day9',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

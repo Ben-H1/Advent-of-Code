@@ -13,7 +13,6 @@ type Part = {
 
 export type Day = {
     title: string;
-    link: string;
     stars: number;
     part1: Part;
     part2?: Part;

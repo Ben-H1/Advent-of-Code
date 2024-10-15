@@ -144,7 +144,6 @@ const part2Solution = (input: string): string => {
 
 export const day19: Day = {
     title: 'Day 19: Aplenty',
-    link: '/2023/day19',
     stars: 1,
     part1: {
         description: descriptions.part1Description,

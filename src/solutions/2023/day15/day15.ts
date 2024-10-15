@@ -102,7 +102,6 @@ const part2Solution = (input: string): string => {
 
 export const day15: Day = {
     title: 'Day 15: Lens Library',
-    link: '/2023/day15',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

@@ -144,7 +144,6 @@ const part2Solution = (input: string): string => {
 
 export const day5: Day = {
     title: 'Day 5: If You Give A Seed A Fertilizer',
-    link: '/2023/day5',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

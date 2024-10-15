@@ -101,7 +101,6 @@ const part2Solution = (input: string): string => {
 
 export const day2: Day = {
     title: 'Day 2: Cube Conundrum',
-    link: '/2023/day2',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

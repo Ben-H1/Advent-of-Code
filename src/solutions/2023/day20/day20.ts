@@ -133,7 +133,6 @@ const part2Solution = (input: string): string => {
 
 export const day20: Day = {
     title: 'Day 20: Pulse Propagation',
-    link: '/2023/day20',
     stars: 0,
     part1: {
         description: descriptions.part1Description,

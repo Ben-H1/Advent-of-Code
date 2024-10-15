@@ -93,7 +93,6 @@ const part2Solution = (input: string): string => {
 
 export const day2: Day = {
     title: 'Day 2: Rock Paper Scissors',
-    link: '2022/day2',
     stars: 2,
     part1: {
         description: descriptions.part1Description,

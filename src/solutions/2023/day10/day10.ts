@@ -303,7 +303,6 @@ const part2SolutionOld = (input: string): string => {
 
 export const day10: Day = {
     title: 'Day 10: Pipe Maze',
-    link: '/2023/day10',
     stars: 1,
     part1: {
         description: descriptions.part1Description,

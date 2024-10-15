@@ -83,7 +83,6 @@ const part2Solution = (input: string): string => {
 
 export const day3: Day = {
     title: 'Day 3: Gear Ratios',
-    link: '/2023/day3',
     stars: 1,
     part1: {
         description: descriptions.part1Description,

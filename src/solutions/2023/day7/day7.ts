@@ -105,7 +105,6 @@ const part2Solution = (input: string): string => {
 
 export const day7: Day = {
     title: 'Day 7: Camel Cards',
-    link: '/2023/day7',
     stars: 1,
     part1: {
         description: descriptions.part1Description,
