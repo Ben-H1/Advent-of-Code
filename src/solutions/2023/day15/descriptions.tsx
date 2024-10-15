@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The newly-focused parabolic reflector dish is sending all of the collected light to a point on the side of yet another mountain - the largest mountain on Lava Island. As you approach the mountain, you find that the light is being collected by the wall of a large facility embedded in the mountainside.</p><br/>
     <p>You find a door under a large sign that says "Lava Production Facility" and next to a smaller sign that says "Danger - Personal Protective Equipment required beyond this point".</p><br/>
     <p>As you step inside, you are immediately greeted by a somewhat panicked reindeer wearing goggles and a loose-fitting <Link link='https://en.wikipedia.org/wiki/Hard_hat'>hard hat</Link>. The reindeer leads you to a shelf of goggles and hard hats (you quickly find some that fit) and then further into the facility. At one point, you pass a button with a faint snout mark and the label "PUSH FOR HELP". No wonder you were loaded into that <Link link='https://adventofcode.com/2023/day/1'>trebuchet</Link> so quickly!</p><br/>
@@ -63,7 +63,7 @@ const part1Description = (<>
     <p>Run the HASH algorithm on each step in the initialization sequence. <Glow>What is the sum of the results?</Glow> (The initialization sequence is one long line; be careful when copy-pasting it.)</p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>You convince the reindeer to bring you the page; the page confirms that your HASH algorithm is working.</p><br/>
     <p>The book goes on to describe a series of 256 <Glow>boxes</Glow> numbered <Code>0</Code> through <Code>255</Code>. The boxes are arranged in a line starting from the point where light enters the facility. The boxes have holes that allow light to pass from one box to the next all the way down the line.</p><br/>
     <CodeBlock>
@@ -145,8 +145,3 @@ const part2Description = (<>
     <p>So, the above example ends up with a total focusing power of <Code><Glow>145</Glow></Code>.</p><br/>
     <p>With the help of an over-enthusiastic reindeer in a hard hat, follow the initialization sequence. <Glow>What is the focusing power of the resulting lens configuration?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

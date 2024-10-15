@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The preparations are finally complete; you and the Elves leave camp on foot and begin to make your way toward the <Glow color='yellow'>star</Glow> fruit grove.</p><br/>
     <p>As you move through the dense undergrowth, one of the Elves gives you a handheld <Glow>device</Glow>. He says that it has many fancy features, but the most important one to set up right now is the <Glow>communication system</Glow>.</p><br/>
     <p>However, because he's heard you have <Link link='https://adventofcode.com/2016/day/6'>significant</Link> <Link link='https://adventofcode.com/2016/day/25'>experience</Link> <Link link='https://adventofcode.com/2019/day/7'>dealing</Link> <Link link='https://adventofcode.com/2019/day/9'>with</Link> <Link link='https://adventofcode.com/2019/day/16'>signal-based</Link> <Link link='https://adventofcode.com/2021/day/25'>systems</Link>, he convinced the other Elves that it would be okay to give you their one malfunctioning device - surely you'll have no problem fixing it.</p><br/>
@@ -28,7 +28,7 @@ const part1Description = (<>
     <p><Glow>How many characters need to be processed before the first start-of-packet marker is detected?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>Your device's communication system is correctly detecting packets, but still isn't working. It looks like it also needs to look for <Glow>messages</Glow>.</p><br/>
     <p>A <Glow>start-of-message marker</Glow> is just like a start-of-packet marker, except it consists of <Glow>14 distinct characters</Glow> rather than 4.</p><br/>
     <p>Here are the first positions of start-of-message markers for all of the above examples:</p><br/>
@@ -41,8 +41,3 @@ const part2Description = (<>
     </List><br/>
     <p><Glow>How many characters need to be processed before the first start-of-message marker is detected?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

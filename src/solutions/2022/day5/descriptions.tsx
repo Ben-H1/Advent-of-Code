@@ -2,7 +2,7 @@ import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The expedition can depart as soon as the final supplies have been unloaded from the ships. Supplies are stored in stacks of marked <Glow>crates</Glow>, but because the needed supplies are buried under many other crates, the crates need to be rearranged.</p><br/>
     <p>The ship has a <Glow>giant cargo crane</Glow> capable of moving crates between stacks. To ensure none of the crates get crushed or fall over, the crane operator will rearrange them in a series of carefully-planned steps. After the crates are rearranged, the desired crates will be at the top of each stack.</p><br/>
     <p>The Elves don't want to interrupt the crane operator during this delicate procedure, but they forgot to ask her <Glow>which</Glow> crate will end up where, and they want to be ready to unload them as soon as possible so they can embark.</p><br/>
@@ -54,7 +54,7 @@ const part1Description = (<>
     <p><Glow>After the rearrangement procedure completes, what crate ends up on top of each stack?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.</p><br/>
     <p>Some mud was covering the writing on the side of the crane, and you quickly wipe it away. The crane isn't a CrateMover 9000 - it's a <Glow>CrateMover 9001</Glow>.</p><br/>
     <p>The CrateMover 9001 is notable for many new and exciting features: air conditioning, leather seats, an extra cup holder, and <Glow>the ability to pick up and move multiple crates at once</Glow>.</p><br/>
@@ -99,8 +99,3 @@ const part2Description = (<>
     <p>In this example, the CrateMover 9001 has put the crates in a totally different order: <Code><Glow>MCD</Glow></Code>.</p><br/>
     <p>Before the rearrangement process finishes, update your simulation so that the Elves know where they should stand to be ready to unload the final supplies. <Glow>After the rearrangement procedure completes, what crate ends up on top of each stack?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

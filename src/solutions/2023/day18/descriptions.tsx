@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>Thanks to your efforts, the machine parts factory is one of the first factories up and running since the lavafall came back. However, to catch up with the large backlog of parts requests, the factory will also need a <Glow>large supply of lava</Glow> for a while; the Elves have already started creating a large lagoon nearby for this purpose.</p><br/>
     <p>However, they aren't sure the lagoon will be big enough; they've asked you to take a look at the <Glow>dig plan</Glow> (your puzzle input). For example:</p><br/>
     <CodeBlock>
@@ -53,10 +53,5 @@ const part1Description = (<>
     <p>The Elves are concerned the lagoon won't be large enough; if they follow their dig plan, <Glow>how many cubic meters of lava could it hold?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

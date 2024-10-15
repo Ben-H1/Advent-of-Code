@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The gondola takes you up. Strangely, though, the ground doesn't seem to be coming with you; you're not climbing a mountain. As the circle of Snow Island recedes below you, an entire new landmass suddenly appears above you! The gondola carries you to the surface of the new island and lurches into the station.</p><br/>
     <p>As you exit the gondola, the first thing you notice is that the air here is much <Glow>warmer</Glow> than it was on Snow Island. It's also quite <Glow>humid</Glow>. Is this where the water source is?</p><br/>
     <p>The next thing you notice is an Elf sitting on the floor across the station in what seems to be a pile of colorful square cards.</p><br/>
@@ -33,7 +33,7 @@ const part1Description = (<>
     <p>Take a seat in the large pile of colorful cards. <Glow>How many points are they worth in total?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>Just as you're about to report your findings to the Elf, one of you realizes that the rules have actually been printed on the back of every card this whole time.</p><br/>
     <p>There's no such thing as "points". Instead, scratchcards only cause you to <Glow>win more scratchcards</Glow> equal to the number of winning numbers you have.</p><br/>
     <p>Specifically, you win <Glow>copies</Glow> of the scratchcards below the winning card equal to the number of matches. So, if card 10 were to have 5 matching numbers, you would win one copy each of cards 11, 12, 13, 14, and 15.</p><br/>
@@ -59,8 +59,3 @@ const part2Description = (<>
     <p>Once all of the originals and copies have been processed, you end up with <Code><Glow>1</Glow></Code> instance of card 1, <Code><Glow>2</Glow></Code> instances of card 2, <Code><Glow>4</Glow></Code> instances of card 3, <Code><Glow>8</Glow></Code> instances of card 4, <Code><Glow>14</Glow></Code> instances of card 5, and <Code><Glow>1</Glow></Code> instance of card 6. In total, this example pile of scratchcards causes you to ultimately have <Code><Glow>30</Glow></Code> scratchcards!</p><br/>
     <p>Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, <Glow>how many total scratchcards do you end up with?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

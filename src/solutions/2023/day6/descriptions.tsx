@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The ferry quickly brings you across Island Island. After asking around, you discover that there is indeed normally a large pile of sand somewhere near here, but you don't see anything besides lots of water and the small island where the ferry has docked.</p><br/>
     <p>As you try to figure out what to do next, you notice a poster on a wall near the ferry dock. "Boat races! Open to the public! Grand prize is an all-expenses-paid trip to <Glow>Desert Island</Glow>!" That must be where the sand comes from! Best of all, the boat races are starting in just a few minutes.</p><br/>
     <p>You manage to sign up as a competitor in the boat races just in time. The organizer explains that it's not really a traditional race - instead, you will get a fixed amount of time during which your boat has to travel as far as it can, and you win if your boat goes the farthest.</p><br/>
@@ -40,7 +40,7 @@ const part1Description = (<>
     <p>Determine the number of ways you could beat the record in each race. <Glow>What do you get if you multiply these numbers together?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>As the race is about to start, you realize the piece of paper with race times and record distances you got earlier actually just has very bad <Link link='https://en.wikipedia.org/wiki/Kerning'>kerning</Link>. There's really <Glow>only one race</Glow> - ignore the spaces between the numbers on each line.</p><br/>
     <p>So, the example from before:</p><br/>
     <CodeBlock>
@@ -55,8 +55,3 @@ const part2Description = (<>
     <p>Now, you have to figure out how many ways there are to win this single race. In this example, the race lasts for <Code><Glow>71530</Glow></Code> <Glow>milliseconds</Glow> and the record distance you need to beat is <Code><Glow>940200</Glow></Code> <Glow>millimeters</Glow>. You could hold the button anywhere from <Code>14</Code> to <Code>71516</Code> milliseconds and beat the record, a total of <Code><Glow>71503</Glow></Code> ways!</p><br/>
     <p><Glow>How many ways can you beat the record in this one much longer race?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

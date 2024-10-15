@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You take the boat and find the gardener right where you were told he would be: managing a giant "garden" that looks more to you like a farm.</p><br/>
     <p>"A water source? Island Island <Glow>is</Glow> the water source!" You point out that Snow Island isn't receiving any water.</p><br/>
     <p>"Oh, we had to stop the water because we <Glow>ran out of sand</Glow> to <Link link='https://en.wikipedia.org/wiki/Sand_filter'>filter</Link> it with! Can't make snow with dirty water. Don't worry, I'm sure we'll get more sand soon; we only turned off the water a few days... weeks... oh no." His face sinks into a look of horrified realization.</p><br/>
@@ -92,7 +92,7 @@ const part1Description = (<>
     <p><Glow>What is the lowest location number that corresponds to any of the initial seed numbers?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>Everyone will starve if you only plant such a small number of seeds. Re-reading the almanac, it looks like the <Code>seeds:</Code> line actually describes <Glow>ranges of seed numbers</Glow>.</p><br/>
     <p>The values on the initial <Code>seeds:</Code> line come in pairs. Within each pair, the first value is the <Glow>start</Glow> of the range and the second value is the <Glow>length</Glow> of the range. So, in the first line of the example above:</p><br/>
     <CodeBlock>
@@ -103,8 +103,3 @@ const part2Description = (<>
     <p>In the above example, the lowest location number can be obtained from seed number <Code>82</Code>, which corresponds to soil <Code>84</Code>, fertilizer <Code>84</Code>, water <Code>84</Code>, light <Code>77</Code>, temperature <Code>45</Code>, humidity <Code>46</Code>, and <Glow>location</Glow> <Code><Glow>46</Glow></Code>. So, the lowest location number is <Code><Glow>46</Glow></Code>.</p><br/>
     <p>Consider all of the initial seed numbers listed in the ranges on the first line of the almanac. <Glow>What is the lowest location number that corresponds to any of the initial seed numbers?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

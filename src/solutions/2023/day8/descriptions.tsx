@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You're still riding a camel across Desert Island when you spot a sandstorm quickly approaching. When you turn to warn the Elf, she disappears before your eyes! To be fair, she had just finished warning you about <Glow>ghosts</Glow> a few minutes ago.</p><br/>
     <p>One of the camel's pouches is labeled "maps" - sure enough, it's full of documents (your puzzle input) about how to navigate the desert. At least, you're pretty sure that's what they are; one of the documents contains a list of left/right instructions, and the rest of the documents seem to describe some kind of <Glow>network</Glow> of labeled nodes.</p><br/>
     <p>It seems like you're meant to use the <Glow>left/right</Glow> instructions to <Glow>navigate the network</Glow>. Perhaps if you have the camel follow the same instructions, you can escape the haunted wasteland!</p><br/>
@@ -32,7 +32,7 @@ const part1Description = (<>
     <p>Starting at <Code>AAA</Code>, follow the left/right instructions. <Glow>How many steps are required to reach</Glow> <Code><Glow>ZZZ</Glow></Code><Glow>?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>The sandstorm is upon you and you aren't any closer to escaping the wasteland. You had the camel follow the instructions, but you've barely left your starting position. It's going to take <Glow>significantly more steps</Glow> to escape!</p><br/>
     <p>What if the map isn't for people - what if the map is for <Glow>ghosts</Glow>? Are ghosts even bound by the laws of spacetime? Only one way to find out.</p><br/>
     <p>After examining the maps a bit longer, your attention is drawn to a curious fact: the number of nodes with names ending in <Code>A</Code> is equal to the number ending in <Code>Z</Code>! If you were a ghost, you'd probably just <Glow>start at every node that ends with</Glow> <Code><Glow>A</Glow></Code> and follow all of the paths at the same time until they all simultaneously end up at nodes that end with <Code>Z</Code>.</p><br/>
@@ -62,8 +62,3 @@ const part2Description = (<>
     <p>So, in this example, you end up entirely on nodes that end in <Code>Z</Code> after <Code><Glow>6</Glow></Code> steps.</p><br/>
     <p>Simultaneously start on every node that ends with <Code>A</Code>. <Glow>How many steps does it take before you're only on nodes that end with</Glow> <Code><Glow>Z</Glow></Code>?</p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

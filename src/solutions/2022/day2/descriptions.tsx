@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The Elves begin to set up camp on the beach. To decide whose tent gets to be closest to the snack storage, a giant <Link link='https://en.wikipedia.org/wiki/Rock_paper_scissors'>Rock Paper Scissors</Link> tournament is already in progress.</p><br/>
     <p>Rock Paper Scissors is a game between two players. Each game contains many rounds; in each round, the players each simultaneously choose one of Rock, Paper, or Scissors using a hand shape. Then, a winner for that round is selected: Rock defeats Scissors, Scissors defeats Paper, and Paper defeats Rock. If both players choose the same shape, the round instead ends in a draw.</p><br/>
     <p>Appreciative of your help yesterday, one Elf gives you an <Glow>encrypted strategy guide</Glow> (your puzzle input) that they say will be sure to help you win. "The first column is what your opponent is going to play: <Code>A</Code> for Rock, <Code>B</Code> for Paper, and <Code>C</Code> for Scissors. The second column--" Suddenly, the Elf is called away to help with someone's tent.</p><br/>
@@ -27,7 +27,7 @@ const part1Description = (<>
     <p><Glow>What would your total score be if everything goes exactly according to your strategy guide?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>The Elf finishes helping with the tent and sneaks back over to you. "Anyway, the second column says how the round needs to end: <Code>X</Code> means you need to lose, <Code>Y</Code> means you need to end the round in a draw, and <Code>Z</Code> means you need to win. Good luck!"</p><br/>
     <p>The total score is still calculated in the same way, but now you need to figure out what shape to choose so the round ends as indicated. The example above now goes like this:</p><br/>
     <List>
@@ -38,8 +38,3 @@ const part2Description = (<>
     <p>Now that you're correctly decrypting the ultra top secret strategy guide, you would get a total score of <Code><Glow>12</Glow></Code>.</p><br/>
     <p>Following the Elf's instructions for the second column, <Glow>what would your total score be if everything goes exactly according to your strategy guide?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

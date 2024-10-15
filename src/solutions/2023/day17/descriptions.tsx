@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The lava starts flowing rapidly once the Lava Production Facility is operational. As you leave, the reindeer offers you a parachute, allowing you to quickly reach Gear Island.</p><br/>
     <p>As you descend, your bird's-eye view of Gear Island reveals why you had trouble finding anyone on your way up: half of Gear Island is empty, but the half below you is a giant factory city!</p><br/>
     <p>You land near the gradually-filling pool of lava at the base of your new <Glow>lavafall</Glow>. Lavaducts will eventually carry the lava throughout the city, but to make use of it immediately, Elves are loading it into large <Link link='https://en.wikipedia.org/wiki/Crucible'>crucibles</Link> on wheels.</p><br/>
@@ -48,10 +48,5 @@ const part1Description = (<>
     <p>Directing the crucible from the lava pool to the machine parts factory, but not moving more than three consecutive blocks in the same direction, <Glow>what is the least heat loss it can incur?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

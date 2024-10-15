@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>Your all-expenses-paid trip turns out to be a one-way, five-minute ride in an <Link link='https://en.wikipedia.org/wiki/Airship'></Link>airship. (At least it's a <Glow>cool</Glow> airship!) It drops you off at the edge of a vast desert and descends back to Island Island.</p><br/>
     <p>"Did you bring the parts?"</p><br/>
     <p>You turn around to see an Elf completely covered in white clothing, wearing goggles, and riding a large <Link link='https://en.wikipedia.org/wiki/Dromedary'>camel</Link>.</p><br/>
@@ -46,7 +46,7 @@ const part1Description = (<>
     <p>Find the rank of every hand in your set. <Glow>What are the total winnings?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>To make things a little more interesting, the Elf introduces one additional rule. Now, <Code>J</Code> cards are <Link link='https://en.wikipedia.org/wiki/Joker_(playing_card)'>jokers</Link> - wildcards that can act like whatever card would make the hand the strongest type possible.</p><br/>
     <p>To balance this, <Code><Glow>J</Glow></Code> <Glow>cards are now the weakest</Glow> individual cards, weaker even than <Code>2</Code>. The other cards stay in the same order: <Code>A</Code>, <Code>K</Code>, <Code>Q</Code>, <Code>T</Code>, <Code>9</Code>, <Code>8</Code>, <Code>7</Code>, <Code>6</Code>, <Code>5</Code>, <Code>4</Code>, <Code>3</Code>, <Code>2</Code>, <Code>J</Code>.</p><br/>
     <p><Code>J</Code> cards can pretend to be whatever card is best for the purpose of determining hand type; for example, <Code>QJJQ2</Code> is now considered <Glow>four of a kind</Glow>. However, for the purpose of breaking ties between two hands of the same type, <Code>J</Code> is always treated as <Code>J</Code>, not the card it's pretending to be: <Code>JKKK2</Code> is weaker than <Code>QQQQ2</Code> because <Code>J</Code> is weaker than <Code>Q</Code>.</p><br/>
@@ -66,8 +66,3 @@ const part2Description = (<>
     <p>With the new joker rule, the total winnings in this example are <Code><Glow>5905</Glow></Code>.</p><br/>
     <p>Using the new joker rule, find the rank of every hand in your set. <Glow>What are the new total winnings?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

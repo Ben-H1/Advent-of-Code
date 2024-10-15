@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You finally reach the hot springs! You can see steam rising from secluded areas attached to the primary, ornate building.</p><br/>
     <p>As you turn to enter, the <Link link='https://adventofcode.com/2023/day/11'>researcher</Link> stops you. "Wait - I thought you were looking for the hot springs, weren't you?" You indicate that this definitely looks like hot springs to you.</p><br/>
     <p>"Oh, sorry, common mistake! This is actually the <Link link='https://en.wikipedia.org/wiki/Onsen'>onsen</Link>! The hot springs are next door."</p><br/>
@@ -64,7 +64,7 @@ const part1Description = (<>
     <p>For each row, count all of the different arrangements of operational and broken springs that meet the given criteria. <Glow>What is the sum of those counts?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>As you look out at the field of springs, you feel like there are way more springs than the condition records list. When you examine the records, you discover that they were actually <Glow>folded up</Glow> this whole time!</p><br/>
     <p>To <Glow>unfold the records</Glow>, on each row, replace the list of spring conditions with five copies of itself (separated by <Code>?</Code>) and replace the list of contiguous groups of damaged springs with five copies of itself (separated by <Code>,</Code>).</p><br/>
     <p>So, this row:</p><br/>
@@ -91,8 +91,3 @@ const part2Description = (<>
     <p>After unfolding, adding all of the possible arrangement counts together produces <Code><Glow>525152</Glow></Code>.</p><br/>
     <p>Unfold your condition records; <Glow>what is the new sum of possible arrangement counts?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

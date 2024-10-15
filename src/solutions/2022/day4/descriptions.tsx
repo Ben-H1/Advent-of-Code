@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>Space needs to be cleared before the last supplies can be unloaded from the ships, and so several Elves have been assigned the job of cleaning up sections of the camp. Every section has a unique <Glow>ID number</Glow>, and each Elf is assigned a range of section IDs.</p><br/>
     <p>However, as some of the Elves compare their section assignments with each other, they've noticed that many of the assignments <Glow>overlap</Glow>. To try to quickly find overlaps and reduce duplicated effort, the Elves pair up and make a <Glow>big list of the section assignments for each pair</Glow> (your puzzle input).</p><br/>
     <p>For example, consider the following list of section assignment pairs:</p><br/>
@@ -45,7 +45,7 @@ const part1Description = (<>
     <p><Glow>In how many assignment pairs does one range fully contain the other?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would like to know the number of pairs that <Glow>overlap at all</Glow>.</p><br/>
     <p>In the above example, the first two pairs (<Code>2-4,6-8</Code> and <Code>2-3,4-5</Code>) don't overlap, while the remaining four pairs (<Code>5-7,7-9</Code>, <Code>2-8,3-7</Code>, <Code>6-6,4-6</Code>, and <Code>2-6,4-8</Code>) do overlap:</p><br/>
     <List>
@@ -57,8 +57,3 @@ const part2Description = (<>
     <p>So, in this example, the number of overlapping assignment pairs is <Code><Glow>4</Glow></Code>.</p><br/>
     <p><Glow>In how many assignment pairs do the ranges overlap?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

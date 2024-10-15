@@ -2,7 +2,7 @@ import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>With your help, the Elves manage to find the right parts and fix all of the machines. Now, they just need to send the command to boot up the machines and get the sand flowing again.</p><br />
     <p>The machines are far apart and wired together with long <Glow>cables</Glow>. The cables don't connect to the machines directly, but rather to communication <Glow>modules</Glow> attached to the machines that perform various initialization tasks and also act as communication relays.</p><br />
     <p>Modules communicate using <Glow>pulses</Glow>. Each pulse is either a <Glow>high pulse</Glow> or a <Glow>low pulse</Glow>. When a module sends a pulse, it sends that type of pulse to each module in its list of <Glow>destination modules</Glow>.</p><br />
@@ -96,10 +96,5 @@ const part1Description = (<>
     <p>Consult your module configuration; determine the number of low pulses and high pulses that would be sent after pushing the button <Code>1000</Code> times, waiting for all pulses to be fully handled after each push of the button. <Glow>What do you get if you multiply the total number of low pulses sent by the total number of high pulses sent?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

@@ -2,7 +2,7 @@ import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>With your help, the hot springs team locates an appropriate spring which launches you neatly and precisely up to the edge of <Glow>Lava Island</Glow>.</p><br/>
     <p>There's just one problem: you don't see any <Glow>lava</Glow>.</p><br/>
     <p>You <Glow>do</Glow> see a lot of ash and igneous rock; there are even what look like gray mountains scattered around. After a while, you make your way to a nearby cluster of mountains only to discover that the valley between them is completely full of large <Glow>mirrors</Glow>. Most of the mirrors seem to be aligned in a consistent way; perhaps you should head in that direction?</p><br/>
@@ -57,7 +57,7 @@ const part1Description = (<>
     <p>Find the line of reflection in each of the patterns in your notes. <Glow>What number do you get after summarizing all of your notes?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>You resume walking through the valley of mirrors and - <Glow>SMACK!</Glow> - run directly into one. Hopefully nobody was watching, because that must have been pretty embarrassing.</p><br/>
     <p>Upon closer inspection, you discover that every mirror has exactly one <Glow>smudge</Glow>: exactly one <Code>.</Code> or <Code>#</Code> should be the opposite type.</p><br/>
     <p>In each pattern, you'll need to locate and fix the smudge that causes a <Glow>different reflection line</Glow> to be valid. (The old reflection line won't necessarily continue being valid after the smudge is fixed.)</p><br/>
@@ -104,8 +104,3 @@ const part2Description = (<>
     <p>Summarize your notes as before, but instead use the new different reflection lines. In this example, the first pattern's new horizontal line has 3 rows above it and the second pattern's new horizontal line has 1 row above it, summarizing to the value <Code><Glow>400</Glow></Code>.</p><br/>
     <p>In each pattern, fix the smudge and find the different line of reflection. <Glow>What number do you get after summarizing the new reflection line in each pattern in your notes?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

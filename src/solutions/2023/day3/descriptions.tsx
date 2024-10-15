@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You and the Elf eventually reach a gondola lift station; he says the <Link link='https://en.wikipedia.org/wiki/Gondola_lift'>gondola lift</Link> will take you up to the <Glow>water source</Glow>, but this is as far as he can bring you. You go inside.</p><br/>
     <p>It doesn't take long to find the gondolas, but there seems to be a problem: they're not moving.</p><br/>
     <p>"Aaah!"</p><br/>
@@ -27,7 +27,7 @@ const part1Description = (<>
     <p>Of course, the actual engine schematic is much larger. <Glow>What is the sum of all of the part numbers in the engine schematic?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>The engineer finds the missing part and installs it in the engine! As the engine springs to life, you jump in the closest gondola, finally ready to ascend to the water source.</p><br/>
     <p>You don't seem to be going very fast, though. Maybe something is still wrong? Fortunately, the gondola has a phone labeled "help", so you pick it up and the engineer answers.</p><br/>
     <p>Before you can explain the situation, she suggests that you look out the window. There stands the engineer, holding a phone in one hand and waving with the other. You're going so slowly that you haven't even left the station. You exit the gondola.</p><br/>
@@ -49,8 +49,3 @@ const part2Description = (<>
     <p>In this schematic, there are <Glow>two</Glow> gears. The first is in the top left; it has part numbers <Code>467</Code> and <Code>35</Code>, so its gear ratio is <Code>16345</Code>. The second gear is in the lower right; its gear ratio is <Code>451490</Code>. (The <Code>*</Code> adjacent to <Code>617</Code> is <Glow>not</Glow> a gear because it is only adjacent to one part number.) Adding up all of the gear ratios produces <Code><Glow>467835</Glow></Code>.</p><br/>
     <p><Glow>What is the sum of all of the gear ratios in your engine schematic?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

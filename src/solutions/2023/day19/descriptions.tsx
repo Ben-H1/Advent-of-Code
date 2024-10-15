@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>The Elves of Gear Island are thankful for your help and send you on your way. They even have a hang glider that someone <Link link='https://adventofcode.com/2023/day/9'>stole</Link> from Desert Island; since you're already going that direction, it would help them a lot if you would use it to get down there and return it to them.</p><br/>
     <p>As you reach the bottom of the <Glow>relentless avalanche of machine parts</Glow>, you discover that they're already forming a formidable heap. Don't worry, though - a group of Elves is already here organizing the parts, and they have a <Glow>system</Glow>.</p><br/>
     <p>To start, each part is rated in each of four categories:</p><br/>
@@ -55,15 +55,10 @@ const part1Description = (<>
     <p>Sort through all of the parts you've been given; <Glow>what do you get if you add together all of the rating numbers for all of the parts that ultimately get accepted?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>Even with your help, the sorting process <Glow>still</Glow> isn't fast enough.</p><br/>
     <p>One of the Elves comes up with a new plan: rather than sort parts individually through all of these workflows, maybe you can figure out in advance which combinations of ratings will be accepted or rejected.</p><br/>
     <p>Each of the four ratings (<Code>x</Code>, <Code>m</Code>, <Code>a</Code>, <Code>s</Code>) can have an integer value ranging from a minimum of <Code>1</Code> to a maximum of <Code>4000</Code>. Of <Glow>all possible distinct combinations</Glow> of ratings, your job is to figure out which ones will be <Glow>accepted</Glow>.</p><br/>
     <p>In the above example, there are <Code><Glow>167409079868000</Glow></Code> distinct combinations of ratings that will be accepted.</p><br/>
     <p>Consider only your list of workflows; the list of part ratings that the Elves wanted you to sort is no longer relevant. <Glow>How many distinct combinations of ratings will be accepted by the Elves' workflows?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

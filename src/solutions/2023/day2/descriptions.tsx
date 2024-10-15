@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.</p><br/>
     <p>The Elf explains that you've arrived at <Glow>Snow Island</Glow> and apologizes for the lack of snow. He'll be happy to explain the situation, but it's a bit of a walk, so you have some time. They don't get many visitors up here; would you like to play a game in the meantime?</p><br/>
     <p>As you walk, the Elf shows you a small bag and some cubes which are either red, green, or blue. Each time you play this game, he will hide a secret number of cubes of each color in the bag, and your goal is to figure out information about the number of cubes.</p><br/>
@@ -23,7 +23,7 @@ const part1Description = (<>
     <p>Determine which games would have been possible if the bag had been loaded with only 12 red cubes, 13 green cubes, and 14 blue cubes. <Glow>What is the sum of the IDs of those games?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>The Elf says they've stopped producing snow because they aren't getting any <Glow>water</Glow>! He isn't sure why the water stopped; however, he can show you how to get to the water source to check it out for yourself. It's just up ahead!</p><br/>
     <p>As you continue your walk, the Elf poses a second question: in each game you played, what is the <Glow>fewest number of cubes of each color</Glow> that could have been in the bag to make the game possible?</p><br/>
     <p>Again consider the example games from earlier:</p><br/>
@@ -44,8 +44,3 @@ const part2Description = (<>
     <p>The <Glow>power</Glow> of a set of cubes is equal to the numbers of red, green, and blue cubes multiplied together. The power of the minimum set of cubes in game 1 is <Code>48</Code>. In games 2-5 it was <Code>12</Code>, <Code>1560</Code>, <Code>630</Code>, and <Code>36</Code>, respectively. Adding up these five powers produces the sum <Code><Glow>2286</Glow></Code>.</p><br/>
     <p>For each game, find the minimum set of cubes that must have been present. <Glow>What is the sum of the power of these sets?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

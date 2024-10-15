@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>With the beam of light completely focused <Glow>somewhere</Glow>, the reindeer leads you deeper still into the Lava Production Facility. At some point, you realize that the steel facility walls have been replaced with cave, and the doorways are just cave, and the floor is cave, and you're pretty sure this is actually just a giant cave.</p><br/>
     <p>Finally, as you approach what must be the heart of the mountain, you see a bright light in a cavern up ahead. There, you discover that the beam of light you so carefully focused is emerging from the cavern wall closest to the facility and pouring all of its energy into a contraption on the opposite side.</p><br/>
     <p>Upon closer inspection, the contraption appears to be a flat, two-dimensional square grid containing <Glow>empty space</Glow> (<Code>.</Code>), <Glow>mirrors</Glow> (<Code>/</Code> and <Code>\</Code>), and <Glow>splitters</Glow> (<Code>|</Code> and <Code>-</Code>).</p><br/>
@@ -59,7 +59,7 @@ const part1Description = (<>
     <p>The light isn't energizing enough tiles to produce lava; to debug the contraption, you need to start by analyzing the current situation. With the beam starting in the top-left heading right, <Glow>how many tiles end up being energized?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>As you try to work out what might be wrong, the reindeer tugs on your shirt and leads you to a nearby control panel. There, a collection of buttons lets you align the contraption so that the beam enters from <Glow>any edge tile</Glow> and heading away from that edge. (You can choose either of two directions for the beam if it starts on a corner; for instance, if the beam starts in the bottom-right corner, it can start heading either left or upward.)</p><br/>
     <p>So, the beam could start on any tile in the top row (heading downward), any tile in the bottom row (heading upward), any tile in the leftmost column (heading right), or any tile in the rightmost column (heading left). To produce lava, you need to find the configuration that <Glow>energizes as many tiles as possible</Glow>.</p><br/>
     <p>In the above example, this can be achieved by starting the beam in the fourth tile from the left in the top row:</p><br/>
@@ -90,8 +90,3 @@ const part2Description = (<>
     </CodeBlock><br/>
     <p>Find the initial beam configuration that energizes the largest number of tiles; <Glow>how many tiles are energized in that configuration?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

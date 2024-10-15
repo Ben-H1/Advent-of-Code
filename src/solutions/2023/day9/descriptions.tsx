@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You ride the camel through the sandstorm and stop where the ghost's maps told you to stop. The sandstorm subsequently subsides, somehow seeing you standing at an <Glow>oasis</Glow>!</p><br/>
     <p>The camel goes to get some water and you stretch your neck. As you look up, you discover what must be yet another giant floating island, this one made of metal! That must be where the <Glow>parts to fix the sand machines</Glow> come from.</p><br/>
     <p>There's even a <Link link='https://en.wikipedia.org/wiki/Hang_gliding'></Link>hang glider partially buried in the sand here; once the sun rises and heats up the sand, you might be able to use the glider and the hot air to get all the way up to the metal island!</p><br/>
@@ -68,7 +68,7 @@ const part1Description = (<>
     <p>Analyze your OASIS report and extrapolate the next value for each history. <Glow>What is the sum of these extrapolated values?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>Of course, it would be nice to have <Glow>even more history</Glow> included in your report. Surely it's safe to just <Glow>extrapolate backwards</Glow> as well, right?</p><br/>
     <p>For each history, repeat the process of finding differences until the sequence of differences is entirely zero. Then, rather than adding a zero to the end and filling in the next values of each previous sequence, you should instead add a zero to the <Glow>beginning</Glow> of your sequence of zeroes, then fill in new <Glow>first</Glow> values for each previous sequence.</p><br/>
     <p>In particular, here is what the third example history looks like when extrapolating back in time:</p><br/>
@@ -83,8 +83,3 @@ const part2Description = (<>
     <p>Doing this for the remaining example data above results in previous values of <Code><Glow>-3</Glow></Code> for the first history and <Code><Glow>0</Glow></Code> for the second history. Adding all three new values together produces <Code><Glow>2</Glow></Code>.</p><br/>
     <p>Analyze your OASIS report again, this time extrapolating the <Glow>previous</Glow> value for each history. <Glow>What is the sum of these extrapolated values?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

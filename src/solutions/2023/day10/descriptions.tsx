@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You use the hang glider to ride the hot air from Desert Island all the way up to the floating metal island. This island is surprisingly cold and there definitely aren't any thermals to glide on, so you leave your hang glider behind.</p><br/>
     <p>You wander around for a while, but you don't find any people or animals. However, you do occasionally find signposts labeled "<Link link='https://en.wikipedia.org/wiki/Hot_spring'>Hot Springs</Link>" pointing in a seemingly consistent direction; maybe you can find someone at the hot springs and ask them where the desert-machine parts are made.</p><br/>
     <p>The landscape here is alien; even the flowers and trees are made of metal. As you stop to admire some metal grass, you notice something metallic scurry away in your peripheral vision and jump into a big pipe! It didn't look like any animal you've ever seen; if you want a better look, you'll need to get ahead of it.</p><br/>
@@ -100,7 +100,7 @@ const part1Description = (<>
     <p>Find the single giant loop starting at <Code>S</Code>. <Glow>How many steps along the loop does it take to get from the starting position to the point farthest from the starting position?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>You quickly reach the farthest point of the loop, but the animal never emerges. Maybe its nest is <Glow>within the area enclosed by the loop</Glow>?</p><br/>
     <p>To determine whether it's even worth taking the time to search for such a nest, you should calculate how many tiles are contained within the loop. For example:</p><br/>
     <CodeBlock>
@@ -195,8 +195,3 @@ const part2Description = (<>
     <p>In this last example, <Code><Glow>10</Glow></Code> tiles are enclosed by the loop.</p><br/>
     <p>Figure out whether you have time to search for the nest by calculating the area within the loop. <Glow>How many tiles are enclosed by the loop?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

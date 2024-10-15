@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>Something is wrong with global snow production, and you've been selected to take a look. The Elves have even given you a map; on it, they've used stars to mark the top fifty locations that are likely to be having problems.</p><br/>
     <p>You've been doing this long enough to know that to restore snow operations, you need to check all <Glow color='yellow'>fifty stars</Glow> by December 25th.</p><br/>
     <p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants <Glow color='yellow'>one star</Glow>. Good luck!</p><br/>
@@ -21,7 +21,7 @@ const part1Description = (<>
     <p>Consider your entire calibration document. <Glow>What is the sum of all of the calibration values?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>Your calculation isn't quite right. It looks like some of the digits are actually <Glow>spelled out with letters</Glow>: <Code>one</Code>, <Code>two</Code>, <Code>three</Code>, <Code>four</Code>, <Code>five</Code>, <Code>six</Code>, <Code>seven</Code>, <Code>eight</Code>, and <Code>nine</Code> <Glow>also</Glow> count as valid "digits".</p><br/>
     <p>Equipped with this new information, you now need to find the real first and last digit on each line. For example:</p><br/>
     <CodeBlock>
@@ -36,8 +36,3 @@ const part2Description = (<>
     <p>In this example, the calibration values are <Code>29</Code>, <Code>83</Code>, <Code>13</Code>, <Code>24</Code>, <Code>42</Code>, <Code>14</Code>, and <Code>76</Code>. Adding these together produces <Code><Glow>281</Glow></Code>.</p><br/>
     <p><Glow>What is the sum of all of the calibration values?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

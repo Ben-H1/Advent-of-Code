@@ -4,7 +4,7 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>Santa's reindeer typically eat regular reindeer food, but they need a lot of <Link link='https://adventofcode.com/2018/day/25'>magical energy</Link> to deliver presents on Christmas. For that, their favorite snack is a special type of <Glow color='yellow'>star</Glow> fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.</p><br/>
     <p>To supply enough magical energy, the expedition needs to retrieve a minimum of <Glow color='yellow'>fifty stars</Glow> by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.</p><br/>
     <p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants <Glow color='yellow'>one star</Glow>. Good luck!</p><br/>
@@ -39,14 +39,9 @@ const part1Description = (<>
     <p>Find the Elf carrying the most Calories. <Glow>How many total Calories is that Elf carrying?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
     <p>By the time you calculate the answer to the Elves' question, they've already realized that the Elf carrying the most Calories of food might eventually <Glow>run out of snacks</Glow>.</p><br/>
     <p>To avoid this unacceptable situation, the Elves would instead like to know the total Calories carried by the <Glow>top three</Glow> Elves carrying the most Calories. That way, even if one of those Elves runs out of snacks, they still have two backups.</p><br/>
     <p>In the example above, the top three Elves are the fourth Elf (with <Code>24000</Code> Calories), then the third Elf (with <Code>11000</Code> Calories), then the fifth Elf (with <Code>10000</Code> Calories). The sum of the Calories carried by these three elves is <Code><Glow>45000</Glow></Code>.</p><br/>
     <p>Find the top three Elves carrying the most Calories. <Glow>How many Calories are those Elves carrying in total?</Glow></p>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};

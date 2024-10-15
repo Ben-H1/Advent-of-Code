@@ -3,7 +3,7 @@ import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
 import List from '@components/text/List';
 
-const part1Description = (<>
+export const part1Description = (<>
     <p>You can hear birds chirping and raindrops hitting leaves as the expedition proceeds. Occasionally, you can even hear much louder sounds in the distance; how big do the animals get out here, anyway?</p><br/>
     <p>The device the Elves gave you has problems with more than just its communication system. You try to run a system update:</p><br/>
     <CodeBlock>
@@ -82,10 +82,5 @@ const part1Description = (<>
     <p>Find all of the directories with a total size of at most 100000. <Glow>What is the sum of the total sizes of those directories?</Glow></p>
 </>);
 
-const part2Description = (<>
+export const part2Description = (<>
 </>);
-
-export const descriptions = {
-    part1Description,
-    part2Description
-};
