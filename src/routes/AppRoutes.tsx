@@ -4,13 +4,13 @@ import NoPage from '@pages/NoPage';
 import { years } from '@solutions/years';
 
 const AppRoutes = () => {
-    const latestYear = years[Object.keys(years)[Object.keys(years).length - 1]];
+    const latestYear = Object.keys(years).slice(-1)[0];
 
     return (
         <Routes>
-            <Route path='/' element={<Navigate to={latestYear[0].link} />} />
+            <Route path='/' element={<Navigate to={`${latestYear}/day/1`} />} />
             {Object.keys(years).map((year) => (years[year].map((day, i) => (
-                <Route key={`year-${year}-day-${i + 1}`} path={day.link} element={<DayTemplate day={day} />} />
+                <Route key={`year-${year}-day-${i + 1}`} path={`${year}/day/${i + 1}`} element={<DayTemplate day={day} />} />
             ))))}
             <Route path='/*' element={<NoPage />} />
         </Routes>

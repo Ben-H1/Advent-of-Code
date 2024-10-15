@@ -11,7 +11,7 @@ const NavBar = () => {
     const location = useLocation();
 
     const currentYear = location.pathname.split('/')[1];
-    const currentDay = parseInt(location.pathname.split('/')[2]?.replace(/\D/g, ''));
+    const currentDay = parseInt(location.pathname.split('/')[3]?.replace(/\D/g, ''));
     const yearIndex = Object.keys(years).indexOf(currentYear);
     
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -29,20 +29,20 @@ const NavBar = () => {
             </div>
             <div className='flex items-center justify-center h-16 text-2xl font-bold border-b select-none'>
                 {(yearIndex > 0) ? (
-                    <IconButton icon={faAngleLeft} onClick={() => navigate(years[Object.keys(years)[yearIndex - 1]][0].link)} />
+                    <IconButton icon={faAngleLeft} onClick={() => navigate(`${Object.keys(years)[yearIndex - 1]}/day/1`)} />
                 ) : (
                     <div className='w-[15px]'></div>
                 )}
                 <div className='mx-8'>{currentYear}</div>
                 {(yearIndex < Object.keys(years).length - 1) ? (
-                    <IconButton icon={faAngleRight} onClick={() => navigate(years[Object.keys(years)[yearIndex + 1]][0].link)} />
+                    <IconButton icon={faAngleRight} onClick={() => navigate(`${Object.keys(years)[yearIndex + 1]}/day/1`)} />
                 ) : (
                     <div className='w-[15px]'></div>
                 )}
             </div>
             <div ref={scrollRef} className='flex flex-col flex-1 py-6 space-y-1 overflow-y-auto scrollbar-thumb-aoc-lighter scrollbar-track-transparent scrollbar-thin scrollbar-thumb-rounded'>
                 {(currentYear && currentDay) && years[currentYear].map((day, i) => (
-                    <NavLink key={`day-${i}`} highlight={i + 1 === currentDay} link={day.link} title={day.title} stars={day.stars} />
+                    <NavLink key={`day-${i}`} highlight={i + 1 === currentDay} link={`${currentYear}/day/${i + 1}`} title={day.title} stars={day.stars} />
                 ))}
             </div>
             <div className='flex items-center justify-center h-20 text-2xl font-bold border-t select-none'>
