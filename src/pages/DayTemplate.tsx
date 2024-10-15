@@ -47,14 +47,23 @@ const InputBox = ({ part }: InputBoxProps) => {
                             <div className='mb-2'>Example inputs:</div>
                             <div className='flex mb-2 space-x-2'>
                                 {part.exampleInput.map((exampleInput, i) => (
-                                    <Button className='grow' key={`exampleInput-${i + 1}`} onClick={() => setInput(exampleInput)}>{i + 1}</Button>
+                                    <Button className='grow' key={`exampleInput-${i + 1}`} onClick={() => {
+                                        setInput(exampleInput);
+                                        setSolution('');
+                                    }}>{i + 1}</Button>
                                 ))}
                             </div>
                         </>
                     ) : (
-                        <Button className='mb-2' onClick={() => setInput(part.exampleInput as string)}>Example input</Button>
+                        <Button className='mb-2' onClick={() => {
+                            setInput(part.exampleInput as string);
+                            setSolution('');
+                        }}>Example input</Button>
                     )}
-                    <Button onClick={() => setInput(part.givenInput)}>Given input</Button>
+                    <Button onClick={() => {
+                        setInput(part.givenInput);
+                        setSolution('');
+                    }}>Given input</Button>
                 </div>
                 <Button className='mb-2' onClick={() => {
                     setInput('');
