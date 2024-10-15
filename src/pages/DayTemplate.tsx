@@ -3,6 +3,7 @@ import Button from '@components/Button';
 import Star from '@components/Star';
 import Code from '@components/text/Code';
 import Glow from '@components/text/Glow';
+import Link from '@components/text/Link';
 
 type Part = {
     description: ReactNode;
@@ -86,17 +87,22 @@ const InputBox = ({ part }: InputBoxProps) => {
 
 type DayTemplateProps = {
     day: Day;
+    year: string;
+    dayNumber: number;
 };
 
-const DayTemplate = ({ day }: DayTemplateProps) => {
+const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
     return (
         <div>
             <h1 id='part1' className='mb-6 text-4xl font-bold'>{day.title}</h1>
-            <div className='flex items-center mb-6'>
-                <h2 className='text-3xl font-bold'>Part 1</h2>
-                {day.stars > 0 && (
-                    <Star className='ml-4 text-xl' />
-                )}
+            <div className='flex items-center justify-between mb-6'>
+                <div className='flex items-center'>
+                    <h2 id='part1' className='text-3xl font-bold'>Part 1</h2>
+                    {day.stars > 0 && (
+                        <Star className='ml-4 text-xl' />
+                    )}
+                </div>
+                <Link link={`https://adventofcode.com/${year}/day/${dayNumber}`}>View on Advent of Code</Link>
             </div>
             <div>{day.part1.description}</div>
             <hr className='my-8' />
@@ -104,11 +110,14 @@ const DayTemplate = ({ day }: DayTemplateProps) => {
             {day.part2 && (
                 <>
                     <hr className='my-8' />
-                    <div className='flex items-center mb-6'>
-                        <h2 id='part2' className='text-3xl font-bold'>Part 2</h2>
-                        {day.stars > 1 && (
-                            <Star className='ml-4 text-xl' />
-                        )}
+                    <div className='flex items-center justify-between mb-6'>
+                        <div className='flex items-center'>
+                            <h2 id='part2' className='text-3xl font-bold'>Part 2</h2>
+                            {day.stars > 1 && (
+                                <Star className='ml-4 text-xl' />
+                            )}
+                        </div>
+                        <Link link={`https://adventofcode.com/${year}/day/${dayNumber}#part2`}>View on Advent of Code</Link>
                     </div>
                     <div>{day.part2.description}</div>
                     <hr className='my-8' />
