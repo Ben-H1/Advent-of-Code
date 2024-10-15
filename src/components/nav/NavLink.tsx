@@ -24,7 +24,7 @@ const NavLink = ({ link, title, stars, highlight }: NavLinkProps) => {
                 {title}
             </div>
             {Boolean(stars) && (
-                <div className='shrink-0'>
+                <div className='shrink-0 pl-6'>
                     {stars === 1 ? (
                         <Star />
                     ) : (
