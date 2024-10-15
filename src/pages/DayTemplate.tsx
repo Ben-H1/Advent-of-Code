@@ -97,7 +97,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
             <h1 id='part1' className='mb-6 text-4xl font-bold'>{day.title}</h1>
             <div className='flex items-center justify-between mb-6'>
                 <div className='flex items-center'>
-                    <h2 id='part1' className='text-3xl font-bold'>Part 1</h2>
+                    <h2 className='text-3xl font-bold'>Part 1</h2>
                     {day.stars > 0 && (
                         <Star className='ml-4 text-xl' />
                     )}
