@@ -94,7 +94,10 @@ type DayTemplateProps = {
 const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
     return (
         <div>
-            <h1 id='part1' className='mb-6 text-4xl font-bold'>{day.title}</h1>
+            <div className='flex items-center justify-between mb-6'>
+                <h1 id='part1' className='text-4xl font-bold'>{day.title}</h1>
+                <Link link={`https://github.com/Ben-H1/Advent-of-Code/blob/main/src/solutions/${year}/day${dayNumber}/solutions.ts`}>View solution code on GitHub</Link>
+            </div>
             <div className='flex items-center justify-between mb-6'>
                 <div className='flex items-center'>
                     <h2 className='text-3xl font-bold'>Part 1</h2>
