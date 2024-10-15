@@ -7,7 +7,7 @@ type LinkProps = {
 
 const Link = ({ link, children }: LinkProps) => {
     return (
-        <a href={link} className='text-aoc-link hover:underline'>
+        <a href={link} target='_blank' className='text-aoc-link hover:underline'>
             {children}
         </a>
     );
