@@ -78,6 +78,7 @@ const InputBox = ({ part }: InputBoxProps) => {
                     <span className='ml-8'>Solution:</span>
                     <Code className='ml-2'><Glow>{solution}</Glow></Code>
                     <Button className='ml-2' onClick={() => navigator.clipboard.writeText(solution)}>Copy to clipboard</Button>
+                    <Button className='ml-8' onClick={() => setSolution('')}>Clear solution</Button>
                 </>
             )}
         </div>
