@@ -103,7 +103,10 @@ const InputBox = ({ part }: InputBoxProps) => {
                     }}>
                         Clear input
                     </Button>
-                    <Button onClick={() => setSolution('')}>
+                    <Button
+                        onClick={() => setSolution('')}
+                        className={solution ? 'visible' : 'invisible'}
+                    >
                         Clear solution
                     </Button>
                 </div>
