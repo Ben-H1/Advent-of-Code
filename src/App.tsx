@@ -1,21 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import NavBar from '@components/nav/NavBar';
 import AppRoutes from '@routes/AppRoutes';
 import { useLocation } from 'react-router-dom';
 
 const App = () => {
-    const location = useLocation();
-
-    const currentYear = location.pathname.split('/')[1];
-    const currentDay = parseInt(location.pathname.split('/')[2]?.replace(/\D/g, ''));
+    useLocation();
 
     const scrollRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollTop = 0;
-        }
-    }, [currentYear, currentDay]);
+    if (scrollRef.current) {
+        scrollRef.current.scrollTop = 0;
+    }
 
     return (
         <div className='flex text-white font-libreBaskerville bg-aoc-dark'>
