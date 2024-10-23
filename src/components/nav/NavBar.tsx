@@ -10,9 +10,15 @@ const NavBar = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const currentYear = location.pathname.split('/')[1];
-    const currentDay = parseInt(location.pathname.split('/')[3]?.replace(/\D/g, ''));
-    const yearIndex = Object.keys(years).indexOf(currentYear);
+    let currentYear = location.pathname.split('/')[1];
+    let currentDay = parseInt(location.pathname.split('/')[3]?.replace(/\D/g, ''));
+    let yearIndex = Object.keys(years).indexOf(currentYear);
+
+    if (currentDay <= 0 || yearIndex === -1) {
+        currentYear = Object.keys(years).slice(-1)[0];
+        currentDay = -1;
+        yearIndex = Object.keys(years).length - 1;
+    }
     
     const scrollRef = useRef<HTMLDivElement>(null);
 
