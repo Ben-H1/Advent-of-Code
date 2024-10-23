@@ -20,7 +20,7 @@ const App = () => {
                 <div className='fixed h-full w-full pointer-events-none'>
                     <Snowfall snowflakeCount={50} speed={[0.5, 1]} wind={[-0.5, 0.5]} />
                 </div>
-                <div className='p-8 relative z-10'>
+                <div className='p-8 relative h-full w-full z-10'>
                     <AppRoutes />
                 </div>
             </div>
