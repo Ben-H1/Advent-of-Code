@@ -22,6 +22,7 @@ const App = () => {
                 </div>
                 <div className='p-8 relative h-full w-full z-10'>
                     <AppRoutes />
+                    <div className='pb-8'></div>
                 </div>
             </div>
         </div>
