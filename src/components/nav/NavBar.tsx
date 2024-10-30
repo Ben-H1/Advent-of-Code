@@ -1,10 +1,11 @@
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { years } from '@solutions/years';
+import { AppContext } from 'contexts/AppContext';
+import { useContext, useEffect, useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import IconButton from '../IconButton';
 import Star from '../Star';
 import NavLink from './NavLink';
-import { useRef, useEffect } from 'react';
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -27,6 +28,8 @@ const NavBar = () => {
             scrollRef.current.scrollTop = 0;
         }
     }, [currentYear]);
+
+    const { showSnow, setShowSnow } = useContext(AppContext);
 
     return (
         <div className='sticky top-0 flex flex-col h-screen border-r border-white bg-aoc-medium shrink-0 w-96'>
@@ -51,7 +54,10 @@ const NavBar = () => {
                     <NavLink key={`day-${i}`} highlight={i + 1 === currentDay} link={`${currentYear}/day/${i + 1}`} title={day.title} stars={day.stars} />
                 ))}
             </div>
-            <div className='flex items-center justify-center h-20 text-2xl font-bold border-t select-none'>
+            <div className='relative flex items-center justify-center h-20 text-2xl font-bold border-t select-none'>
+                <div className='absolute bottom-0 left-0 ml-2 mb-2 text-xs cursor-pointer' onClick={() => setShowSnow(p => !p)}>
+                    {showSnow ? 'disable snow' : 'enable snow'}
+                </div>
                 <Star />
                 {currentYear && (
                     <span className='mx-4'>Stars: {years[currentYear].map(d => d.stars).reduce((a, b) => a + b)}</span>
