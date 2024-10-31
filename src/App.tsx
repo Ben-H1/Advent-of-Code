@@ -1,18 +1,20 @@
 import NavBar from '@components/nav/NavBar';
 import AppRoutes from '@routes/AppRoutes';
 import { AppContext } from 'contexts/AppContext';
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Snowfall } from 'react-snowfall';
 
 const App = () => {
-    useLocation();
+    const location = useLocation();
 
     const scrollRef = useRef<HTMLDivElement>(null);
 
-    if (scrollRef.current) {
-        scrollRef.current.scrollTop = 0;
-    }
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = 0;
+        }
+    }, [location.pathname]);
 
     const { showSnow } = useContext(AppContext);
 
