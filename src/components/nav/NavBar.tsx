@@ -1,7 +1,7 @@
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faChevronLeft, faCog } from '@fortawesome/free-solid-svg-icons';
 import { years } from '@solutions/years';
 import { AppContext } from 'contexts/AppContext';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import IconButton from '../IconButton';
 import Star from '../Star';
@@ -30,6 +30,7 @@ const NavBar = () => {
     }, [currentYear]);
 
     const { showSnow, setShowSnow } = useContext(AppContext);
+    const [settingsExpanded, setSettingsExpanded] = useState(false);
 
     return (
         <div className='sticky top-0 flex flex-col h-screen border-r border-white bg-aoc-medium shrink-0 w-96'>
@@ -38,29 +39,60 @@ const NavBar = () => {
             </div>
             <div className='flex items-center justify-center h-16 text-2xl font-bold border-b select-none'>
                 {(yearIndex > 0) ? (
-                    <IconButton icon={faAngleLeft} onClick={() => navigate(`${Object.keys(years)[yearIndex - 1]}/day/1`)} />
+                    <IconButton
+                        icon={faAngleLeft}
+                        onClick={() => navigate(`${Object.keys(years)[yearIndex - 1]}/day/1`)}
+                    />
                 ) : (
                     <div className='w-[15px]'></div>
                 )}
                 <div className='mx-8'>{currentYear}</div>
                 {(yearIndex < Object.keys(years).length - 1) ? (
-                    <IconButton icon={faAngleRight} onClick={() => navigate(`${Object.keys(years)[yearIndex + 1]}/day/1`)} />
+                    <IconButton
+                        icon={faAngleRight}
+                        onClick={() => navigate(`${Object.keys(years)[yearIndex + 1]}/day/1`)}
+                    />
                 ) : (
                     <div className='w-[15px]'></div>
                 )}
             </div>
             <div ref={scrollRef} className='flex flex-col flex-1 py-6 space-y-1 overflow-y-auto scrollbar-thumb-aoc-lighter scrollbar-track-transparent scrollbar-thin scrollbar-thumb-rounded'>
                 {(currentYear && currentDay) && years[currentYear].map((day, i) => (
-                    <NavLink key={`day-${i}`} highlight={i + 1 === currentDay} link={`${currentYear}/day/${i + 1}`} title={day.title} stars={day.stars} />
+                    <NavLink
+                        key={`day-${i}`}
+                        highlight={i + 1 === currentDay}
+                        link={`${currentYear}/day/${i + 1}`}
+                        title={day.title}
+                        stars={day.stars}
+                    />
                 ))}
             </div>
             <div className='relative flex items-center justify-center h-20 text-2xl font-bold border-t select-none'>
-                <div className='absolute bottom-0 left-0 ml-2 mb-2 text-xs cursor-pointer' onClick={() => setShowSnow(p => !p)}>
-                    {showSnow ? 'disable snow' : 'enable snow'}
+                <div className='absolute bottom-0 mb-2 px-2 space-x-2 flex w-full'>
+                    {settingsExpanded ? (
+                        <>
+                            <span className='text-xs cursor-pointer hover:drop-shadow-glow-white hover:scale-105' onClick={() => setShowSnow(p => !p)}>
+                                {showSnow ? 'disable snow' : 'enable snow'}
+                            </span>
+                            <IconButton
+                                className='h-4'
+                                icon={faChevronLeft}
+                                onClick={() => setSettingsExpanded(false)}
+                            />
+                        </>
+                    ) : (
+                        <IconButton
+                            className='h-4'
+                            icon={faCog}
+                            onClick={() => setSettingsExpanded(true)}
+                        />
+                    )}
                 </div>
                 <Star />
                 {currentYear && (
-                    <span className='mx-4'>Stars: {years[currentYear].map(d => d.stars).reduce((a, b) => a + b)}</span>
+                    <span className='mx-4'>
+                        Stars: {years[currentYear].map(d => d.stars).reduce((a, b) => a + b)}
+                    </span>
                 )}
                 <Star />
             </div>
