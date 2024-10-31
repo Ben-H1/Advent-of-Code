@@ -13,6 +13,14 @@ const App = () => {
     useEffect(() => {
         if (scrollRef.current) {
             scrollRef.current.scrollTop = 0;
+
+            if (location.hash) {
+                const hashElement = document.querySelector(location.hash);
+
+                if (hashElement) {
+                    hashElement.scrollIntoView();
+                }
+            }
         }
     }, [location.pathname]);
 
