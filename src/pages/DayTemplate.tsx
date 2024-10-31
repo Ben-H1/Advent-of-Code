@@ -1,8 +1,10 @@
 import Button from '@components/Button';
+import IconButton from '@components/IconButton';
 import Star from '@components/Star';
 import Code from '@components/text/Code';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { ReactNode, useEffect, useState } from 'react';
 
 type Part = {
@@ -115,6 +117,9 @@ const InputBox = ({ part }: InputBoxProps) => {
     </>);
 };
 
+const officialUrl = 'https://adventofcode.com';
+const repoUrl = 'https://github.com/Ben-H1/Advent-of-Code';
+
 type DayTemplateProps = {
     day: Day;
     year: string;
@@ -127,21 +132,26 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
             <div className='flex items-center justify-between mb-6'>
                 <h1 id='part1' className='text-4xl font-bold'>{day.title}</h1>
                 <Link
-                    link={`https://github.com/Ben-H1/Advent-of-Code/blob/main/src/solutions/${year}/day${dayNumber}/solutions.ts`}
+                    link={`${repoUrl}/blob/main/src/solutions/${year}/day${dayNumber}/solutions.ts`}
                     className='pl-8 text-right'
                 >
                     View solution code on GitHub
                 </Link>
             </div>
             <div className='flex items-center justify-between mb-6'>
-                <div className='flex items-center shrink-0'>
+                <div className='flex items-center shrink-0 space-x-4 group'>
                     <h2 className='text-3xl font-bold'>Part 1</h2>
                     {day.stars > 0 && (
-                        <Star className='ml-4 text-xl' />
+                        <Star className='text-xl' />
                     )}
+                    <IconButton
+                        className='group-hover:visible invisible'
+                        icon={faLink}
+                        onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}`)}
+                    />
                 </div>
                 <Link
-                    link={`https://adventofcode.com/${year}/day/${dayNumber}`}
+                    link={`${officialUrl}/${year}/day/${dayNumber}`}
                     className='pl-8 text-right'
                 >
                     View on Advent of Code
@@ -154,15 +164,20 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                 <>
                     <hr className='my-8' />
                     <div className='flex items-center justify-between mb-6'>
-                        <div className='flex items-center shrink-0'>
+                        <div className='flex items-center shrink-0 space-x-4 group'>
                             <h2 id='part2' className='text-3xl font-bold'>Part 2</h2>
                             {day.stars > 1 && (
-                                <Star className='ml-4 text-xl' />
+                                <Star className='text-xl' />
                             )}
+                            <IconButton
+                                className='group-hover:visible invisible'
+                                icon={faLink}
+                                onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}#part2`)}
+                            />
                         </div>
                         <Link
                             className='pl-8 text-right'
-                            link={`https://adventofcode.com/${year}/day/${dayNumber}#part2`}
+                            link={`${officialUrl}/${year}/day/${dayNumber}#part2`}
                         >
                             View on Advent of Code
                         </Link>
