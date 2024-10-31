@@ -72,7 +72,7 @@ const NavBar = () => {
                     {settingsExpanded ? (
                         <>
                             <span className='text-xs cursor-pointer hover:drop-shadow-glow-white hover:scale-105' onClick={() => setShowSnow(p => !p)}>
-                                {showSnow ? 'disable snow' : 'enable snow'}
+                                {showSnow ? 'Disable snow' : 'Enable snow'}
                             </span>
                             <IconButton
                                 className='h-4'
