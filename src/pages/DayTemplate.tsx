@@ -4,6 +4,7 @@ import Star from '@components/Star';
 import Code from '@components/text/Code';
 import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
+import Tooltip from '@components/Tooltip';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { ReactNode, useEffect, useState } from 'react';
 
@@ -144,11 +145,16 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                     {day.stars > 0 && (
                         <Star className='text-xl' />
                     )}
-                    <IconButton
-                        className='group-hover:visible invisible'
-                        icon={faLink}
-                        onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}`)}
-                    />
+                    <Tooltip
+                        tooltipContent='Copy link'
+                        tooltipTempContent='Link copied!'
+                    >
+                        <IconButton
+                            className='group-hover:visible invisible'
+                            icon={faLink}
+                            onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}`)}
+                        />
+                    </Tooltip>
                 </div>
                 <Link
                     link={`${officialUrl}/${year}/day/${dayNumber}`}
@@ -169,11 +175,16 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                             {day.stars > 1 && (
                                 <Star className='text-xl' />
                             )}
-                            <IconButton
-                                className='group-hover:visible invisible'
-                                icon={faLink}
-                                onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}#part2`)}
-                            />
+                            <Tooltip
+                                tooltipContent='Copy link'
+                                tooltipTempContent='Link copied!'
+                            >
+                                <IconButton
+                                    className='group-hover:visible invisible'
+                                    icon={faLink}
+                                    onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}#part2`)}
+                                />
+                            </Tooltip>
                         </div>
                         <Link
                             className='pl-8 text-right'
