@@ -3,8 +3,8 @@ import { part1Description, part2Description } from './descriptions';
 import { inputs } from './inputs';
 import { part1Solution, part2Solution } from './solutions';
 
-export const day1: Day = {
-    title: 'Day 1: Historian Hysteria',
+export const day2: Day = {
+    title: 'Day 2: Red-Nosed Reports',
     stars: 2,
     part1: {
         description: part1Description,
