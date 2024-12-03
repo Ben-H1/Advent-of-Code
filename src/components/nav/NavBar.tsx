@@ -29,7 +29,11 @@ const NavBar = () => {
         }
     }, [currentYear]);
 
-    const { showSnow, setShowSnow } = useContext(AppContext);
+    const {
+        showSnow, setShowSnow,
+        showPerformance, setShowPerformance
+    } = useContext(AppContext);
+
     const [settingsExpanded, setSettingsExpanded] = useState(false);
 
     return (
@@ -68,11 +72,15 @@ const NavBar = () => {
                 ))}
             </div>
             <div className='relative flex items-center justify-center h-20 text-2xl font-bold border-t select-none'>
-                <div className='absolute bottom-0 mb-2 px-2 space-x-2 flex w-full'>
+                <div className='absolute bottom-0 flex w-full px-2 mb-2 space-x-2'>
                     {settingsExpanded ? (
                         <>
                             <span className='text-xs cursor-pointer hover:drop-shadow-glow-white hover:scale-105' onClick={() => setShowSnow(p => !p)}>
                                 {showSnow ? 'Disable snow' : 'Enable snow'}
+                            </span>
+                            <span className='text-xs'>|</span>
+                            <span className='text-xs cursor-pointer hover:drop-shadow-glow-white hover:scale-105' onClick={() => setShowPerformance(p => !p)}>
+                                {showPerformance ? 'Disable performance info' : 'Enable performance info'}
                             </span>
                             <IconButton
                                 className='h-4'

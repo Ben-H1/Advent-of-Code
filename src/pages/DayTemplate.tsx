@@ -6,7 +6,8 @@ import Glow from '@components/text/Glow';
 import Link from '@components/text/Link';
 import Tooltip from '@components/Tooltip';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { ReactNode, useEffect, useState } from 'react';
+import { AppContext } from 'contexts/AppContext';
+import { ReactNode, useContext, useEffect, useState } from 'react';
 
 type Part = {
     description: ReactNode;
@@ -29,10 +30,22 @@ type InputBoxProps = {
 const InputBox = ({ part }: InputBoxProps) => {
     const [input, setInput] = useState('');
     const [solution, setSolution] = useState('');
+    const [runtime, setRuntime] = useState<number | null>(null);
+
+    const { showPerformance } = useContext(AppContext);
+
+    const resetInput = () => {
+        setInput('');
+    };
+
+    const resetSolution = () => {
+        setSolution('');
+        setRuntime(null);
+    };
 
     useEffect(() => {
-        setInput('');
-        setSolution('');
+        resetInput();
+        resetSolution();
     }, [part]);
 
     return (<>
@@ -44,8 +57,15 @@ const InputBox = ({ part }: InputBoxProps) => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                 />
-                <div className='flex items-center'>
-                    <Button onClick={() => setSolution(part.solution(input))}>
+                <div className='flex items-center mr-2'>
+                    <Button onClick={() => {
+                        const startTime = performance.now();
+                        const result = part.solution(input);
+                        const endTime = performance.now();
+
+                        setSolution(result);
+                        setRuntime(endTime - startTime);
+                    }}>
                         Solve!
                     </Button>
                     {solution && (
@@ -53,13 +73,15 @@ const InputBox = ({ part }: InputBoxProps) => {
                             <span className='ml-8'>Solution:</span>
                             <Code className='ml-2'><Glow>{solution}</Glow></Code>
                             <Button
-                                className='ml-8 mr-2'
+                                className='ml-8'
                                 onClick={() => navigator.clipboard.writeText(solution)}
                                 tempValue={'Copied!'}
                             >
                                 Copy to clipboard
                             </Button>
-                            
+                            {(showPerformance && runtime != null) && (
+                                <span className='ml-8'>Found in {+runtime.toFixed(2)} ms</span>
+                            )}
                         </>
                     )}
                 </div>
@@ -76,7 +98,7 @@ const InputBox = ({ part }: InputBoxProps) => {
                                         key={`exampleInput-${i + 1}`}
                                         onClick={() => {
                                             setInput(exampleInput);
-                                            setSolution('');
+                                            resetSolution();
                                         }}
                                     >
                                         {i + 1}
@@ -87,27 +109,27 @@ const InputBox = ({ part }: InputBoxProps) => {
                     ) : (
                         <Button className='mb-2' onClick={() => {
                             setInput(part.exampleInput as string);
-                            setSolution('');
+                            resetSolution();
                         }}>
                             Example input
                         </Button>
                     )}
                     <Button onClick={() => {
                         setInput(part.givenInput);
-                        setSolution('');
+                        resetSolution();
                     }}>
                         Given input
                     </Button>
                 </div>
                 <div className='flex flex-col'>
                     <Button className='mb-2' onClick={() => {
-                        setInput('');
-                        setSolution('');
+                        resetInput();
+                        resetSolution();
                     }}>
                         Clear input
                     </Button>
                     <Button
-                        onClick={() => setSolution('')}
+                        onClick={() => resetSolution()}
                         className={solution ? 'visible' : 'invisible'}
                     >
                         Clear solution
@@ -140,7 +162,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                 </Link>
             </div>
             <div className='flex items-center justify-between mb-6'>
-                <div className='flex items-center shrink-0 space-x-4 group'>
+                <div className='flex items-center space-x-4 shrink-0 group'>
                     <h2 className='text-3xl font-bold'>Part 1</h2>
                     {day.stars > 0 && (
                         <Star className='text-xl' />
@@ -150,7 +172,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                         tooltipTempContent='Link copied!'
                     >
                         <IconButton
-                            className='group-hover:visible invisible'
+                            className='invisible group-hover:visible'
                             icon={faLink}
                             onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}`)}
                         />
@@ -170,7 +192,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                 <>
                     <hr className='my-8' />
                     <div className='flex items-center justify-between mb-6'>
-                        <div className='flex items-center shrink-0 space-x-4 group'>
+                        <div className='flex items-center space-x-4 shrink-0 group'>
                             <h2 id='part2' className='text-3xl font-bold'>Part 2</h2>
                             {day.stars > 1 && (
                                 <Star className='text-xl' />
@@ -180,7 +202,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                                 tooltipTempContent='Link copied!'
                             >
                                 <IconButton
-                                    className='group-hover:visible invisible'
+                                    className='invisible group-hover:visible'
                                     icon={faLink}
                                     onClick={() => navigator.clipboard.writeText(`${window.location.origin}/${year}/day/${dayNumber}#part2`)}
                                 />
