@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -8,7 +9,7 @@ export const part1Description = (<>
     <p>The Elves begin to set up camp on the beach. To decide whose tent gets to be closest to the snack storage, a giant <Link link='https://en.wikipedia.org/wiki/Rock_paper_scissors'>Rock Paper Scissors</Link> tournament is already in progress.</p><br/>
     <p>Rock Paper Scissors is a game between two players. Each game contains many rounds; in each round, the players each simultaneously choose one of Rock, Paper, or Scissors using a hand shape. Then, a winner for that round is selected: Rock defeats Scissors, Scissors defeats Paper, and Paper defeats Rock. If both players choose the same shape, the round instead ends in a draw.</p><br/>
     <p>Appreciative of your help yesterday, one Elf gives you an <Glow>encrypted strategy guide</Glow> (your puzzle input) that they say will be sure to help you win. "The first column is what your opponent is going to play: <Code>A</Code> for Rock, <Code>B</Code> for Paper, and <Code>C</Code> for Scissors. The second column--" Suddenly, the Elf is called away to help with someone's tent.</p><br/>
-    <p>The second column, you reason, must be what you should play in response: <Code>X</Code> for Rock, <Code>Y</Code> for Paper, and <Code>Z</Code> for Scissors. Winning every time would be suspicious, so the responses must have been carefully chosen.</p><br/>
+    <p>The second column, <Hidden content='Why do you keep guessing?!'>you reason</Hidden>, must be what you should play in response: <Code>X</Code> for Rock, <Code>Y</Code> for Paper, and <Code>Z</Code> for Scissors. Winning every time would be suspicious, so the responses must have been carefully chosen.</p><br/>
     <p>The winner of the whole tournament is the player with the highest score. Your <Glow>total score</Glow> is the sum of your scores for each round. The score for a single round is the score for the <Glow>shape you selected</Glow> (1 for Rock, 2 for Paper, and 3 for Scissors) plus the score for the <Glow>outcome of the round</Glow> (0 if you lost, 3 if the round was a draw, and 6 if you won).</p><br/>
     <p>Since you can't be sure if the Elf is trying to help you or trick you, you should calculate the score you would get if you were to follow the strategy guide.</p><br/>
     <p>For example, suppose you were given the following strategy guide:</p><br/>

@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -9,7 +10,7 @@ export const part1Description = (<>
     <p>To supply enough magical energy, the expedition needs to retrieve a minimum of <Glow color='yellow'>fifty stars</Glow> by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.</p><br/>
     <p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants <Glow color='yellow'>one star</Glow>. Good luck!</p><br/>
     <p>The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One important consideration is food - in particular, the number of <Glow>Calories</Glow> each Elf is carrying (your puzzle input).</p><br/>
-    <p>The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.</p><br/>
+    <p>The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, <Hidden content={`By "etc", you're pretty sure they just mean "more snacks".`}>etc.</Hidden> that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.</p><br/>
     <p>For example, suppose the Elves finish writing their items' Calories and end up with the following list:</p><br/>
     <CodeBlock>
         1000<br/>

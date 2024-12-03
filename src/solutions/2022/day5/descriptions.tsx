@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 
 export const part1Description = (<>
     <p>The expedition can depart as soon as the final supplies have been unloaded from the ships. Supplies are stored in stacks of marked <Glow>crates</Glow>, but because the needed supplies are buried under many other crates, the crates need to be rearranged.</p><br/>
@@ -56,7 +57,7 @@ export const part1Description = (<>
 
 export const part2Description = (<>
     <p>As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.</p><br/>
-    <p>Some mud was covering the writing on the side of the crane, and you quickly wipe it away. The crane isn't a CrateMover 9000 - it's a <Glow>CrateMover 9001</Glow>.</p><br/>
+    <p>Some mud was covering the writing on the side of the crane, and you quickly wipe it away. The crane isn't a CrateMover 9000 - it's a <Hidden content={`It's way better than the old CrateMover 1006.`}><Glow>CrateMover 9001</Glow></Hidden>.</p><br/>
     <p>The CrateMover 9001 is notable for many new and exciting features: air conditioning, leather seats, an extra cup holder, and <Glow>the ability to pick up and move multiple crates at once</Glow>.</p><br/>
     <p>Again considering the example above, the crates begin in the same configuration:</p><br/>
     <CodeBlock>

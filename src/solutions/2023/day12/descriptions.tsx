@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -8,7 +9,7 @@ export const part1Description = (<>
     <p>You finally reach the hot springs! You can see steam rising from secluded areas attached to the primary, ornate building.</p><br/>
     <p>As you turn to enter, the <Link link='https://adventofcode.com/2023/day/11'>researcher</Link> stops you. "Wait - I thought you were looking for the hot springs, weren't you?" You indicate that this definitely looks like hot springs to you.</p><br/>
     <p>"Oh, sorry, common mistake! This is actually the <Link link='https://en.wikipedia.org/wiki/Onsen'>onsen</Link>! The hot springs are next door."</p><br/>
-    <p>You look in the direction the researcher is pointing and suddenly notice the massive metal helixes towering overhead. "This way!"</p><br/>
+    <p>You look in the direction the researcher is pointing and suddenly notice the <Hidden content={`I love this joke. I'm not sorry.`}>massive metal helixes</Hidden> towering overhead. "This way!"</p><br/>
     <p>It only takes you a few more steps to reach the main gate of the massive fenced-off area containing the springs. You go through the gate and into a small administrative building.</p><br/>
     <p>"Hello! What brings you to the hot springs today? Sorry they're not very hot right now; we're having a <Glow>lava shortage</Glow> at the moment." You ask about the missing machine parts for Desert Island.</p><br/>
     <p>"Oh, all of Gear Island is currently offline! Nothing is being manufactured at the moment, not until we get more lava to heat our forges. And our springs. The springs aren't very springy unless they're hot!"</p><br/>

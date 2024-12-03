@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 
 export const part1Description = (<>
     <p>With your help, the Elves manage to find the right parts and fix all of the machines. Now, they just need to send the command to boot up the machines and get the sand flowing again.</p><br />
@@ -21,7 +22,7 @@ export const part1Description = (<>
         %c -{'>'} inv<br/>
         &inv -{'>'} a
     </CodeBlock><br />
-    <p>In this module configuration, the broadcaster has three destination modules named <Code>a</Code>, <Code>b</Code>, and <Code>c</Code>. Each of these modules is a flip-flop module (as indicated by the <Code>%</Code> prefix). <Code>a</Code> outputs to <Code>b</Code> which outputs to <Code>c</Code> which outputs to another module named <Code>inv</Code>. <Code>inv</Code> is a conjunction module (as indicated by the <Code>&</Code> prefix) which, because it has only one input, acts like an inverter (it sends the opposite of the pulse type it receives); it outputs to <Code>a</Code>.</p><br />
+    <p>In this module configuration, the broadcaster has three destination modules named <Code>a</Code>, <Code>b</Code>, and <Code>c</Code>. Each of these modules is a flip-flop module (as indicated by the <Code>%</Code> prefix). <Code>a</Code> outputs to <Code>b</Code> which outputs to <Code>c</Code> which outputs to another module named <Code>inv</Code>. <Code>inv</Code> is a conjunction module (as indicated by the <Code>&</Code> prefix) which, because it has only one input, acts like an <Hidden content='This puzzle originally had a separate inverter module type until I realized it was just a worse conjunction module.'>inverter</Hidden> (it sends the opposite of the pulse type it receives); it outputs to <Code>a</Code>.</p><br />
     <p>By pushing the button once, the following pulses are sent:</p><br />
     <CodeBlock>
         button -low-{'>'} broadcaster<br/>

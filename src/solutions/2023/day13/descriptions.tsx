@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 
 export const part1Description = (<>
     <p>With your help, the hot springs team locates an appropriate spring which launches you neatly and precisely up to the edge of <Glow>Lava Island</Glow>.</p><br/>
@@ -58,7 +59,7 @@ export const part1Description = (<>
 </>);
 
 export const part2Description = (<>
-    <p>You resume walking through the valley of mirrors and - <Glow>SMACK!</Glow> - run directly into one. Hopefully nobody was watching, because that must have been pretty embarrassing.</p><br/>
+    <p>You resume walking through the valley of mirrors and - <Glow>SMACK!</Glow> - run directly into one. Hopefully <Hidden content='Sorry, Nobody saw that.'>nobody</Hidden> was watching, because that must have been pretty embarrassing.</p><br/>
     <p>Upon closer inspection, you discover that every mirror has exactly one <Glow>smudge</Glow>: exactly one <Code>.</Code> or <Code>#</Code> should be the opposite type.</p><br/>
     <p>In each pattern, you'll need to locate and fix the smudge that causes a <Glow>different reflection line</Glow> to be valid. (The old reflection line won't necessarily continue being valid after the smudge is fixed.)</p><br/>
     <p>Here's the above example again:</p><br/>

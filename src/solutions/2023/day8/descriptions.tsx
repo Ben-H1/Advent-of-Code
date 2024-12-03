@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import List from '@components/text/List';
 
 export const part1Description = (<>
@@ -33,7 +34,7 @@ export const part1Description = (<>
 </>);
 
 export const part2Description = (<>
-    <p>The sandstorm is upon you and you aren't any closer to escaping the wasteland. You had the camel follow the instructions, but you've barely left your starting position. It's going to take <Glow>significantly more steps</Glow> to escape!</p><br/>
+    <p>The <Hidden content='Duhduhduhduhduh! Dah, duhduhduhduhduh!'>sandstorm</Hidden> is upon you and you aren't any closer to escaping the wasteland. You had the camel follow the instructions, but you've barely left your starting position. It's going to take <Glow>significantly more steps</Glow> to escape!</p><br/>
     <p>What if the map isn't for people - what if the map is for <Glow>ghosts</Glow>? Are ghosts even bound by the laws of spacetime? Only one way to find out.</p><br/>
     <p>After examining the maps a bit longer, your attention is drawn to a curious fact: the number of nodes with names ending in <Code>A</Code> is equal to the number ending in <Code>Z</Code>! If you were a ghost, you'd probably just <Glow>start at every node that ends with</Glow> <Code><Glow>A</Glow></Code> and follow all of the paths at the same time until they all simultaneously end up at nodes that end with <Code>Z</Code>.</p><br/>
     <p>For example:</p><br/>

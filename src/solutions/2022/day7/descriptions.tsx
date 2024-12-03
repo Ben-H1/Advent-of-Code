@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import List from '@components/text/List';
 
 export const part1Description = (<>
@@ -8,7 +9,7 @@ export const part1Description = (<>
     <p>The device the Elves gave you has problems with more than just its communication system. You try to run a system update:</p><br/>
     <CodeBlock>
         $ system-update --please --pretty-please-with-sugar-on-top<br/>
-        Error: No space left on device
+        <Hidden content='E099 PROGRAMMER IS OVERLY POLITE'>Error</Hidden>: No space left on device
     </CodeBlock><br/>
     <p>Perhaps you can delete some files to make space for the update?</p><br/>
     <p>You browse around the filesystem to assess the situation and save the resulting terminal output (your puzzle input). For example:</p><br/>

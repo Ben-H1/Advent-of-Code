@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -8,7 +9,7 @@ export const part1Description = (<>
     <p>The preparations are finally complete; you and the Elves leave camp on foot and begin to make your way toward the <Glow color='yellow'>star</Glow> fruit grove.</p><br/>
     <p>As you move through the dense undergrowth, one of the Elves gives you a handheld <Glow>device</Glow>. He says that it has many fancy features, but the most important one to set up right now is the <Glow>communication system</Glow>.</p><br/>
     <p>However, because he's heard you have <Link link='https://adventofcode.com/2016/day/6'>significant</Link> <Link link='https://adventofcode.com/2016/day/25'>experience</Link> <Link link='https://adventofcode.com/2019/day/7'>dealing</Link> <Link link='https://adventofcode.com/2019/day/9'>with</Link> <Link link='https://adventofcode.com/2019/day/16'>signal-based</Link> <Link link='https://adventofcode.com/2021/day/25'>systems</Link>, he convinced the other Elves that it would be okay to give you their one malfunctioning device - surely you'll have no problem fixing it.</p><br/>
-    <p>As if inspired by comedic timing, the device emits a few colorful sparks.</p><br/>
+    <p>As if inspired by comedic timing, the device emits a few <Hidden content='The magic smoke, on the other hand, seems to be contained... FOR NOW!'>colorful sparks</Hidden>.</p><br/>
     <p>To be able to communicate with the Elves, the device needs to <Glow>lock on to their signal</Glow>. The signal is a series of seemingly-random characters that the device receives one at a time.</p><br/>
     <p>To fix the communication system, you need to add a subroutine to the device that detects a <Glow>start-of-packet marker</Glow> in the datastream. In the protocol being used by the Elves, the start of a packet is indicated by a sequence of <Glow>four characters that are all different</Glow>.</p><br/>
     <p>The device will send your subroutine a datastream buffer (your puzzle input); your subroutine needs to identify the first position where the four most recently received characters were all different. Specifically, it needs to report the number of characters from the beginning of the buffer to the end of the first such four-character marker.</p><br/>

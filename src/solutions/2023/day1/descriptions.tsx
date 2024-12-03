@@ -1,13 +1,14 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 
 export const part1Description = (<>
     <p>Something is wrong with global snow production, and you've been selected to take a look. The Elves have even given you a map; on it, they've used stars to mark the top fifty locations that are likely to be having problems.</p><br/>
     <p>You've been doing this long enough to know that to restore snow operations, you need to check all <Glow color='yellow'>fifty stars</Glow> by December 25th.</p><br/>
     <p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants <Glow color='yellow'>one star</Glow>. Good luck!</p><br/>
-    <p>You try to ask why they can't just use a <Link link='https://adventofcode.com/2015/day/1'>weather machine</Link> ("not powerful enough") and where they're even sending you ("the sky") and why your map looks mostly blank ("you sure ask a lot of questions") and hang on did you just say the sky ("of course, where do you think snow comes from") when you realize that the Elves are already loading you into a <Link link='https://en.wikipedia.org/wiki/Trebuchet'>trebuchet</Link> ("please hold still, we need to strap you in").</p><br/>
+    <p>You try to ask why they can't just use a <Link link='https://adventofcode.com/2015/day/1'>weather machine</Link> ("not powerful enough") and where they're even sending you ("the sky") and why your map looks mostly blank ("you sure ask a lot of questions") <Hidden content='My hope is that this abomination of a run-on sentence somehow conveys the chaos of being hastily loaded into a trebuchet.'>and</Hidden> hang on did you just say the sky ("of course, where do you think snow comes from") when you realize that the Elves are already loading you into a <Link link='https://en.wikipedia.org/wiki/Trebuchet'>trebuchet</Link> ("please hold still, we need to strap you in").</p><br/>
     <p>As they're making the final adjustments, they discover that their calibration document (your puzzle input) has been <Glow>amended</Glow> by a very young Elf who was apparently just excited to show off her art skills. Consequently, the Elves are having trouble reading the values on the document.</p><br/>
     <p>The newly-improved calibration document consists of lines of text; each line originally contained a specific <Glow>calibration value</Glow> that the Elves now need to recover. On each line, the calibration value can be found by combining the <Glow>first digit</Glow> and the <Glow>last digit</Glow> (in that order) to form a single <Glow>two-digit number</Glow>.</p><br/>
     <p>For example:</p><br/>

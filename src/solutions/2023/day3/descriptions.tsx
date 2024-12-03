@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 
 export const part1Description = (<>
@@ -31,7 +32,7 @@ export const part2Description = (<>
     <p>The engineer finds the missing part and installs it in the engine! As the engine springs to life, you jump in the closest gondola, finally ready to ascend to the water source.</p><br/>
     <p>You don't seem to be going very fast, though. Maybe something is still wrong? Fortunately, the gondola has a phone labeled "help", so you pick it up and the engineer answers.</p><br/>
     <p>Before you can explain the situation, she suggests that you look out the window. There stands the engineer, holding a phone in one hand and waving with the other. You're going so slowly that you haven't even left the station. You exit the gondola.</p><br/>
-    <p>The missing part wasn't the only issue - one of the gears in the engine is wrong. A <Glow>gear</Glow> is any <Code>*</Code> symbol that is adjacent to <Glow>exactly two part numbers</Glow>. Its <Glow>gear ratio</Glow> is the result of multiplying those two numbers together.</p><br/>
+    <p>The missing part wasn't the only issue - one of the gears in the engine is wrong. A <Glow>gear</Glow> is any <Code>*</Code> symbol that is adjacent to <Glow>exactly two part numbers</Glow>. Its <Glow>gear ratio</Glow> is the result of <Hidden content={`They're magic gears.`}>multiplying</Hidden> those two numbers together.</p><br/>
     <p>This time, you need to find the gear ratio of every gear and add them all up so that the engineer can figure out which gear needs to be replaced.</p><br/>
     <p>Consider the same engine schematic again:</p><br/>
     <CodeBlock>

@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import List from '@components/text/List';
 
 export const part1Description = (<>
@@ -46,7 +47,7 @@ export const part1Description = (<>
 </>);
 
 export const part2Description = (<>
-    <p>It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would like to know the number of pairs that <Glow>overlap at all</Glow>.</p><br/>
+    <p>It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would <Hidden content={`If you like this, you'll *love* axis-aligned bounding box intersection testing.`}>like</Hidden> to know the number of pairs that <Glow>overlap at all</Glow>.</p><br/>
     <p>In the above example, the first two pairs (<Code>2-4,6-8</Code> and <Code>2-3,4-5</Code>) don't overlap, while the remaining four pairs (<Code>5-7,7-9</Code>, <Code>2-8,3-7</Code>, <Code>6-6,4-6</Code>, and <Code>2-6,4-8</Code>) do overlap:</p><br/>
     <List>
         <li><Code>5-7,7-9</Code> overlaps in a single section, <Code>7</Code>.</li>

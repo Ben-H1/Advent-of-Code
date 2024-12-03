@@ -1,10 +1,11 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 
 export const part1Description = (<>
-    <p>You ride the camel through the sandstorm and stop where the ghost's maps told you to stop. The sandstorm subsequently subsides, somehow seeing you standing at an <Glow>oasis</Glow>!</p><br/>
+    <p>You ride the camel through the sandstorm and stop where the ghost's maps told you to stop. <Hidden content='The sound of a sandstorm slowly settling.'>The sandstorm subsequently subsides, somehow seeing you standing at an <Glow>oasis</Glow>!</Hidden></p><br/>
     <p>The camel goes to get some water and you stretch your neck. As you look up, you discover what must be yet another giant floating island, this one made of metal! That must be where the <Glow>parts to fix the sand machines</Glow> come from.</p><br/>
     <p>There's even a <Link link='https://en.wikipedia.org/wiki/Hang_gliding'></Link>hang glider partially buried in the sand here; once the sun rises and heats up the sand, you might be able to use the glider and the hot air to get all the way up to the metal island!</p><br/>
     <p>While you wait for the sun to rise, you admire the oasis hidden here in the middle of Desert Island. It must have a delicate ecosystem; you might as well take some ecological readings while you wait. Maybe you can report any environmental instabilities you find to someone so the oasis can be around for the next sandstorm-worn traveler.</p><br/>

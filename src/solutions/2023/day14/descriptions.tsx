@@ -1,10 +1,11 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 
 export const part1Description = (<>
-    <p>You reach the place where all of the mirrors were pointing: a massive <Link link='https://en.wikipedia.org/wiki/Parabolic_reflector'>parabolic reflector dish</Link> attached to the side of another large mountain.</p><br/>
+    <p>You reach the place where all of the mirrors were pointing: a massive <Link link='https://en.wikipedia.org/wiki/Parabolic_reflector'>parabolic reflector dish</Link> <Hidden content='Why, where do you attach YOUR massive parabolic reflector dishes?'>attached</Hidden> to the side of another large mountain.</p><br/>
     <p>The dish is made up of many small mirrors, but while the mirrors themselves are roughly in the shape of a parabolic reflector dish, each individual mirror seems to be pointing in slightly the wrong direction. If the dish is meant to focus light, all it's doing right now is sending it in a vague direction.</p><br/>
     <p>This system must be what provides the energy for the lava! If you focus the reflector dish, maybe you can go where it's pointing and use the light to fix the lava production.</p><br/>
     <p>Upon closer inspection, the individual mirrors each appear to be connected via an elaborate system of ropes and pulleys to a large metal platform below the dish. The platform is covered in large rocks of various shapes. Depending on their position, the weight of the rocks deforms the platform, and the shape of the platform controls which ropes move and ultimately the focus of the dish.</p><br/>

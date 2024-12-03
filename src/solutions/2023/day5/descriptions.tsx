@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -49,7 +50,7 @@ export const part1Description = (<>
     </CodeBlock><br/>
     <p>The almanac starts by listing which seeds need to be planted: seeds <Code>79</Code>, <Code>14</Code>, <Code>55</Code>, and <Code>13</Code>.</p><br/>
     <p>The rest of the almanac contains a list of <Glow>maps</Glow> which describe how to convert numbers from a <Glow>source category</Glow> into numbers in a <Glow>destination category</Glow>. That is, the section that starts with <Code>seed-to-soil map:</Code> describes how to convert a <Glow>seed number</Glow> (the source) to a <Glow>soil number</Glow> (the destination). This lets the gardener and his team know which soil to use with which seeds, which water to use with which fertilizer, and so on.</p><br/>
-    <p>Rather than list every source number and its corresponding destination number one by one, the maps describe entire <Glow>ranges</Glow> of numbers that can be converted. Each line within a map contains three numbers: the <Glow>destination range start</Glow>, the <Glow>source range start</Glow>, and the <Glow>range length</Glow>.</p><br/>
+    <p>Rather than list every source number and its corresponding destination number one by one, the maps describe entire <Glow>ranges</Glow> of numbers that can be converted. Each line within a map contains <Hidden content={`Don't blame me for the weird order. Blame LXC container.conf UID mappings.`}>three numbers</Hidden>: the <Glow>destination range start</Glow>, the <Glow>source range start</Glow>, and the <Glow>range length</Glow>.</p><br/>
     <p>Consider again the example <Code>seed-to-soil map</Code>:</p><br/>
     <CodeBlock>
         50 98 2<br/>

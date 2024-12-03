@@ -1,11 +1,12 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
 export const part1Description = (<>
-    <p>Your all-expenses-paid trip turns out to be a one-way, five-minute ride in an <Link link='https://en.wikipedia.org/wiki/Airship'></Link>airship. (At least it's a <Glow>cool</Glow> airship!) It drops you off at the edge of a vast desert and descends back to Island Island.</p><br/>
+    <p>Your all-expenses-paid trip turns out to be a one-way, five-minute ride in an <Link link='https://en.wikipedia.org/wiki/Airship'></Link>airship. (At least it's a <Hidden content={`Please only read this sentence while listening to 'The Airship Blackjack' from the Final Fantasy 6 soundtrack.`}><Glow>cool</Glow> airship</Hidden>!) It drops you off at the edge of a vast desert and descends back to Island Island.</p><br/>
     <p>"Did you bring the parts?"</p><br/>
     <p>You turn around to see an Elf completely covered in white clothing, wearing goggles, and riding a large <Link link='https://en.wikipedia.org/wiki/Dromedary'>camel</Link>.</p><br/>
     <p>"Did you bring the parts?" she asks again, louder this time. You aren't sure what parts she's looking for; you're here to figure out why the sand stopped.</p><br/>

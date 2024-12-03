@@ -1,11 +1,12 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import List from '@components/text/List';
 
 export const part1Description = (<>
     <p>With the beam of light completely focused <Glow>somewhere</Glow>, the reindeer leads you deeper still into the Lava Production Facility. At some point, you realize that the steel facility walls have been replaced with cave, and the doorways are just cave, and the floor is cave, and you're pretty sure this is actually just a giant cave.</p><br/>
-    <p>Finally, as you approach what must be the heart of the mountain, you see a bright light in a cavern up ahead. There, you discover that the beam of light you so carefully focused is emerging from the cavern wall closest to the facility and pouring all of its energy into a contraption on the opposite side.</p><br/>
+    <p>Finally, as you approach what must be the heart of the mountain, you see a bright light in a cavern up ahead. There, you discover that the <Hidden content={`Not anymore, there's a blanket!`}>beam</Hidden> of light you so carefully focused is emerging from the cavern wall closest to the facility and pouring all of its energy into a contraption on the opposite side.</p><br/>
     <p>Upon closer inspection, the contraption appears to be a flat, two-dimensional square grid containing <Glow>empty space</Glow> (<Code>.</Code>), <Glow>mirrors</Glow> (<Code>/</Code> and <Code>\</Code>), and <Glow>splitters</Glow> (<Code>|</Code> and <Code>-</Code>).</p><br/>
     <p>The contraption is aligned so that most of the beam bounces around the grid, but each tile on the grid converts some of the beam's light into <Glow>heat</Glow> to melt the rock in the cavern.</p><br/>
     <p>You note the layout of the contraption (your puzzle input). For example:</p><br/>

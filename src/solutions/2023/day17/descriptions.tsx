@@ -1,10 +1,11 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 
 export const part1Description = (<>
-    <p>The lava starts flowing rapidly once the Lava Production Facility is operational. As you leave, the reindeer offers you a parachute, allowing you to quickly reach Gear Island.</p><br/>
+    <p>The lava starts flowing rapidly once the Lava Production Facility is operational. As you <Hidden content='see you soon?'>leave</Hidden>, the reindeer offers you a parachute, allowing you to quickly reach Gear Island.</p><br/>
     <p>As you descend, your bird's-eye view of Gear Island reveals why you had trouble finding anyone on your way up: half of Gear Island is empty, but the half below you is a giant factory city!</p><br/>
     <p>You land near the gradually-filling pool of lava at the base of your new <Glow>lavafall</Glow>. Lavaducts will eventually carry the lava throughout the city, but to make use of it immediately, Elves are loading it into large <Link link='https://en.wikipedia.org/wiki/Crucible'>crucibles</Link> on wheels.</p><br/>
     <p>The crucibles are top-heavy and pushed by hand. Unfortunately, the crucibles become very difficult to steer at high speeds, and so it can be hard to go in a straight line for very long.</p><br/>

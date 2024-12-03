@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -96,7 +97,7 @@ export const part1Description = (<>
 
 export const part2Description = (<>
     <p>The galaxies are much <Glow>older</Glow> (and thus much <Glow>farther apart</Glow>) than the researcher initially estimated.</p><br/>
-    <p>Now, instead of the expansion you did before, make each empty row or column <Glow>one million times</Glow> larger. That is, each empty row should be replaced with <Code>1000000</Code> empty rows, and each empty column should be replaced with <Code>1000000</Code> empty columns.</p><br/>
+    <p>Now, instead of the expansion you did before, make each empty row or column <Glow><Hidden content='And you have to have your pinky near your mouth when you do it.'>one million</Hidden> times</Glow> larger. That is, each empty row should be replaced with <Code>1000000</Code> empty rows, and each empty column should be replaced with <Code>1000000</Code> empty columns.</p><br/>
     <p>(In the example above, if each empty row or column were merely <Code>10</Code> times larger, the sum of the shortest paths between every pair of galaxies would be <Code><Glow>1030</Glow></Code>. If each empty row or column were merely <Code>100</Code> times larger, the sum of the shortest paths between every pair of galaxies would be <Code><Glow>8410</Glow></Code>. However, your universe will need to expand far beyond these values.)</p><br/>
     <p>Starting with the same initial image, expand the universe according to these new rules, then find the length of the shortest path between every pair of galaxies. <Glow>What is the sum of these lengths?</Glow></p>
 </>);

@@ -1,11 +1,12 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import List from '@components/text/List';
 
 export const part1Description = (<>
     <p>You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.</p><br/>
-    <p>The Elf explains that you've arrived at <Glow>Snow Island</Glow> and apologizes for the lack of snow. He'll be happy to explain the situation, but it's a bit of a walk, so you have some time. They don't get many visitors up here; would you like to play a game in the meantime?</p><br/>
+    <p>The Elf explains that you've arrived at <Glow>Snow Island</Glow> and apologizes for the lack of snow. He'll be happy to explain the situation, but it's a bit of a walk, so you have some time. They don't get many visitors up here; <Hidden content={`No, the Elf's name is not 'WOPR'. It's Joshua.`}>would you like to play a game</Hidden> in the meantime?</p><br/>
     <p>As you walk, the Elf shows you a small bag and some cubes which are either red, green, or blue. Each time you play this game, he will hide a secret number of cubes of each color in the bag, and your goal is to figure out information about the number of cubes.</p><br/>
     <p>To get information, once a bag has been loaded with cubes, the Elf will reach into the bag, grab a handful of random cubes, show them to you, and then put them back in the bag. He'll do this a few times per game.</p><br/>
     <p>You play several games and record the information from each game (your puzzle input). Each game is listed with its ID number (like the <Code>11</Code> in <Code>Game 11: ...</Code>) followed by a semicolon-separated list of subsets of cubes that were revealed from the bag (like <Code>3 red, 5 green, 4 blue</Code>).</p><br/>

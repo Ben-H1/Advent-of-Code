@@ -1,12 +1,13 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
 export const part1Description = (<>
     <p>The Elves of Gear Island are thankful for your help and send you on your way. They even have a hang glider that someone <Link link='https://adventofcode.com/2023/day/9'>stole</Link> from Desert Island; since you're already going that direction, it would help them a lot if you would use it to get down there and return it to them.</p><br/>
-    <p>As you reach the bottom of the <Glow>relentless avalanche of machine parts</Glow>, you discover that they're already forming a formidable heap. Don't worry, though - a group of Elves is already here organizing the parts, and they have a <Glow>system</Glow>.</p><br/>
+    <p>As you reach the bottom of the <Glow>relentless avalanche of machine parts</Glow>, you discover that they're already forming a formidable heap. Don't worry, though - a group of Elves is already here organizing the parts, and they have a <Hidden content='This part sparks joy. This part sparks joy. This part ALSO sparks joy... I think we need a different system.'><Glow>system</Glow></Hidden>.</p><br/>
     <p>To start, each part is rated in each of four categories:</p><br/>
     <List>
         <li><Code>x</Code>: E<Glow>x</Glow>tremely cool looking</li>

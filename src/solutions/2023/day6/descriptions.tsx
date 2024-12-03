@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -41,7 +42,7 @@ export const part1Description = (<>
 </>);
 
 export const part2Description = (<>
-    <p>As the race is about to start, you realize the piece of paper with race times and record distances you got earlier actually just has very bad <Link link='https://en.wikipedia.org/wiki/Kerning'>kerning</Link>. There's really <Glow>only one race</Glow> - ignore the spaces between the numbers on each line.</p><br/>
+    <p>As the race is about to start, you realize the piece of paper with race times and record distances you got earlier actually just has <Hidden content='Keming!'>very bad</Hidden> <Link link='https://en.wikipedia.org/wiki/Kerning'>kerning</Link>. There's really <Glow>only one race</Glow> - ignore the spaces between the numbers on each line.</p><br/>
     <p>So, the example from before:</p><br/>
     <CodeBlock>
         Time:      7  15   30<br/>

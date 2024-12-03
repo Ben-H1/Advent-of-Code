@@ -1,11 +1,12 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
 export const part1Description = (<>
-    <p>One Elf has the important job of loading all of the <Link link='https://en.wikipedia.org/wiki/Rucksack'>rucksacks</Link> with supplies for the jungle journey. Unfortunately, that Elf didn't quite follow the packing instructions, and so a few items now need to be rearranged.</p><br/>
+    <p>One Elf has the important job of loading all of the <Link link='https://en.wikipedia.org/wiki/Rucksack'>rucksacks</Link> with supplies for the <Hidden content={`Where there's jungle, there's hijinxs.`}>jungle</Hidden> journey. Unfortunately, that Elf didn't quite follow the packing instructions, and so a few items now need to be rearranged.</p><br/>
     <p>Each rucksack has two large <Glow>compartments</Glow>. All items of a given type are meant to go into exactly one of the two compartments. The Elf that did the packing failed to follow this rule for exactly one item type per rucksack.</p><br/>
     <p>The Elves have made a list of all of the items currently in each rucksack (your puzzle input), but they need your help finding the errors. Every item type is identified by a single lowercase or uppercase letter (that is, <Code>a</Code> and <Code>A</Code> refer to different types of items).</p><br/>
     <p>The list of items for each rucksack is given as characters all on a single line. A given rucksack always has the same number of items in each of its two compartments, so the first half of the characters represent items in the first compartment, while the second half of the characters represent items in the second compartment.</p><br/>

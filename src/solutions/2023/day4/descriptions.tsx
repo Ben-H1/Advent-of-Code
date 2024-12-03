@@ -1,6 +1,7 @@
 import Code from '@components/text/Code';
 import CodeBlock from '@components/text/CodeBlock';
 import Glow from '@components/text/Glow';
+import Hidden from '@components/text/Hidden';
 import Link from '@components/text/Link';
 import List from '@components/text/List';
 
@@ -9,7 +10,7 @@ export const part1Description = (<>
     <p>As you exit the gondola, the first thing you notice is that the air here is much <Glow>warmer</Glow> than it was on Snow Island. It's also quite <Glow>humid</Glow>. Is this where the water source is?</p><br/>
     <p>The next thing you notice is an Elf sitting on the floor across the station in what seems to be a pile of colorful square cards.</p><br/>
     <p>"Oh! Hello!" The Elf excitedly runs over to you. "How may I be of service?" You ask about water sources.</p><br/>
-    <p>"I'm not sure; I just operate the gondola lift. That does sound like something we'd have, though - this is <Glow>Island Island</Glow>, after all! I bet the <Glow>gardener</Glow> would know. He's on a different island, though - er, the small kind surrounded by water, not the floating kind. We really need to come up with a better naming scheme. Tell you what: if you can help me with something quick, I'll let you <Glow>borrow my boat</Glow> and you can go visit the gardener. I got all these <Link link='https://en.wikipedia.org/wiki/Scratchcard'>scratchcards</Link> as a gift, but I can't figure out what I've won."</p><br/>
+    <p>"I'm not sure; I just operate the gondola lift. That does sound like something we'd have, though - this is <Hidden content='I find this way funnier than it has any right to be.'><Glow>Island Island</Glow></Hidden>, after all! I bet the <Glow>gardener</Glow> would know. He's on a different island, though - er, the small kind surrounded by water, not the floating kind. We really need to come up with a better naming scheme. Tell you what: if you can help me with something quick, I'll let you <Glow>borrow my boat</Glow> and you can go visit the gardener. I got all these <Link link='https://en.wikipedia.org/wiki/Scratchcard'>scratchcards</Link> as a gift, but I can't figure out what I've won."</p><br/>
     <p>The Elf leads you over to the pile of colorful cards. There, you discover dozens of scratchcards, all with their opaque covering already scratched off. Picking one up, it looks like each card has two lists of numbers separated by a vertical bar (<Code>|</Code>): a list of <Glow>winning numbers</Glow> and then a list of <Glow>numbers you have</Glow>. You organize the information into a table (your puzzle input).</p><br/>
     <p>As far as the Elf has been able to figure out, you have to figure out which of the <Glow>numbers you have</Glow> appear in the list of <Glow>winning numbers</Glow>. The first match makes the card worth <Glow>one point</Glow> and each match after the first <Glow>doubles</Glow> the point value of that card.</p><br/>
     <p>For example:</p><br/>
