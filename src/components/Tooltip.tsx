@@ -25,7 +25,9 @@ const Tooltip = ({ children, tooltipContent, tooltipTempContent, tempTimeMs = 10
                 {children}
                 <ReactTooltip
                     id={uniqueId}
-                    className='!select-none !bg-aoc-lighter !opacity-100'
+                    classNameArrow='!border-white !border-px !border-b !border-r'
+                    className='!select-none !bg-aoc-light !border-white !border-px !border font-libreBaskerville z-10'
+                    opacity={1}
                     delayShow={delayShowMs}
                 >
                     {useTemp ? (tooltipTempContent ?? tooltipContent) : tooltipContent}
