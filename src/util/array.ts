@@ -19,3 +19,5 @@ export const indexOfMulti = (array: any[], value: any) => {
 
     return indices;
 };
+
+export const stringify2d = (array: any[][], delimiter: string = '') => array.map(a => a.join(delimiter)).join('\n');
