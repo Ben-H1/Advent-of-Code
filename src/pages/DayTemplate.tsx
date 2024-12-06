@@ -186,7 +186,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                 </Link>
             </div>
             <div>{day.part1.description}</div>
-            <hr className='my-8' />
+            <hr className='my-8' id='part1Input' />
             <InputBox part={day.part1} />
             {day.part2 && (
                 <>
@@ -216,7 +216,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                         </Link>
                     </div>
                     <div>{day.part2.description}</div>
-                    <hr className='my-8' />
+                    <hr className='my-8' id='part2Input' />
                     <InputBox part={day.part2} />
                 </>
             )}
