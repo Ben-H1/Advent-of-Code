@@ -188,7 +188,7 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
             <div>{day.part1.description}</div>
             <hr className='my-8' id='part1Input' />
             <InputBox part={day.part1} />
-            {day.part2 && (
+            {day.part2 && day.stars >= 1 && (
                 <>
                     <hr className='my-8' />
                     <div className='flex items-center justify-between mb-6'>
