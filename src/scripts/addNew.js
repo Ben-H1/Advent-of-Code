@@ -81,19 +81,60 @@ const addDay = async () => {
         return;
     }
 
+    const allDayFolders = [...dayFolders, newDayFolderName].sort((a, b) => parseInt(a.replace('day', '') - parseInt(b.replace('day', ''))));
+    const chunks = [];
+
+    for (let i = 0; i < allDayFolders.length; i += 7) {
+        chunks.push(allDayFolders.slice(i, i + 7));
+    }
+
+    let indexContent = `import { Day } from '@pages/DayTemplate';\n`;
+    allDayFolders.forEach(f => indexContent += `import { ${f} } from './${f}/${f}';\n`);
+    indexContent += '\nexport const days: Day[] = [\n';
+    chunks.forEach((c, i) => indexContent += `    ${c.join(', ')}${(i !== c.length - 1) ? ',' : ''}\n`);
+    indexContent += '];\n';
+
     const newDir = `../solutions/${selectedYear}/${newDayFolderName}`;
     fs.mkdirSync(newDir);
 
     fs.writeFileSync(`${newDir}/${newDayFolderName}.ts`, dayContent.replace('dayX', newDayFolderName).replace('Day X', `Day ${newDayNumber}`));
-    fs.writeFileSync(`${newDir}/descriptions.ts`, descriptionsContent);
+    fs.writeFileSync(`${newDir}/descriptions.tsx`, descriptionsContent);
     fs.writeFileSync(`${newDir}/inputs.ts`, inputsContent);
     fs.writeFileSync(`${newDir}/solutions.ts`, solutionsContent);
+
+    fs.writeFileSync(`../solutions/${selectedYear}/days.ts`, indexContent);
 
     console.log(`Day ${newDayNumber} created.`);
 };
 
 const addYear = async () => {
+    const yearFiles = fs.readdirSync('../solutions');
+    const yearFolders = yearFiles.filter(f => path.extname(f) === '');
 
+    const newYearNumber = await number({ message: 'Which number year?' });
+    const newYearFolderName = newYearNumber.toString();
+
+    if (yearFolders.includes(newYearFolderName)) {
+        console.log('Year already exists.');
+        return;
+    }
+
+    const dayIndexContent = `import { Day } from '@pages/DayTemplate';\n\nexport const days: Day[] = [];\n`;
+
+    const allYearFolders = [...yearFolders, newYearFolderName];
+    let yearIndexContent = `import { Day } from '@pages/DayTemplate';\n`;
+    allYearFolders.forEach(f => yearIndexContent += `import { days as days${f} } from './${f}/days';\n`);
+    yearIndexContent += `\nexport const years: Record<string, Day[]> = {\n`;
+    allYearFolders.map((f, i) => yearIndexContent += `    '${f}': days${f}${(i !== allYearFolders.length - 1) ? ',' : ''}\n`);
+    yearIndexContent += '};\n';
+
+    const newDir = `../solutions/${newYearFolderName}`;
+    fs.mkdirSync(newDir);
+
+    fs.writeFileSync(`${newDir}/days.ts`, dayIndexContent);
+    fs.writeFileSync(`../solutions/years.ts`, yearIndexContent);
+
+    console.log(`Year ${newYearFolderName} created.`);
 };
 
 const main = async () => {
