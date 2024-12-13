@@ -91,7 +91,7 @@ const addDay = async () => {
     let indexContent = `import { Day } from '@pages/DayTemplate';\n`;
     allDayFolders.forEach(f => indexContent += `import { ${f} } from './${f}/${f}';\n`);
     indexContent += '\nexport const days: Day[] = [\n';
-    chunks.forEach((c, i) => indexContent += `    ${c.join(', ')}${(i !== c.length - 1) ? ',' : ''}\n`);
+    chunks.forEach((c, i) => indexContent += `    ${c.join(', ')}${(i !== chunks.length - 1) ? ',' : ''}\n`);
     indexContent += '];\n';
 
     const newDir = `../solutions/${selectedYear}/${newDayFolderName}`;
