@@ -1,3 +1,4 @@
+import { stringify2d } from '@util/array';
 import { product } from '@util/math';
 
 type Coordinate = {
@@ -87,6 +88,20 @@ export const part1Solution = (input: string): string => {
     return quadrantProduct.toString();
 };
 
+const robotsToGrid = (robots: Robot[], gridWidth: number, gridHeight: number): number[][] => {
+    const grid: number[][] = [];
+
+    for (let y = 0; y < gridHeight; y++) {
+        const newRow = [];
+        for (let x = 0; x < gridWidth; x++) {
+            newRow.push(robots.filter(r => r.position.x === x && r.position.y === y).length);
+        }
+        grid.push(newRow);
+    }
+
+    return grid;
+};
+
 export const part2Solution = (input: string): string => {
     const robots = parseRobots(input);
 
@@ -96,8 +111,27 @@ export const part2Solution = (input: string): string => {
     let found = false;
     let i = 0;
     do {
-        //check, set found
-        found = true;
+        const grid = robotsToGrid(robots, gridWidth, gridHeight);
+        
+        for (let y = 0; y < grid.length; y++) {
+            if (!found) {
+                let longestLine = 0;
+                let lineCount = 0;
+                for (let x = 0; x < grid.length; x++) {
+                    if (grid[y][x] > 0) {
+                        lineCount++;
+                    } else {
+                        if (lineCount > longestLine) {
+                            longestLine = lineCount;
+                        }
+                        lineCount = 0;
+                    }
+                }
+                if (longestLine > 8) {
+                    found = true;
+                }
+            }
+        }
 
         if (!found) {
             moveRobots(robots, gridWidth, gridHeight);

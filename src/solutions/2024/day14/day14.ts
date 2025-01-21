@@ -5,7 +5,7 @@ import { part1Solution, part2Solution } from './solutions';
 
 export const day14: Day = {
     title: 'Day 14: Restroom Redoubt',
-    stars: 1,
+    stars: 2,
     part1: {
         description: part1Description,
         solution: part1Solution,
