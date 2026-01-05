@@ -1,5 +1,3 @@
-import { stringify2d } from '@util/array';
-
 type Line = {
     x1: number;
     y1: number;
