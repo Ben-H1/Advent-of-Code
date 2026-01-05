@@ -14,6 +14,7 @@ type Part = {
     solution: (input: string) => string;
     exampleInput: string | string[];
     givenInput: string;
+    noSolution?: boolean;
 };
 
 export type Day = {
@@ -186,8 +187,12 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                 </Link>
             </div>
             <div>{day.part1.description}</div>
-            <hr className='my-8' id='part1Input' />
-            <InputBox part={day.part1} />
+            {!day.part1.noSolution && (
+                <>
+                    <hr className='my-8' id='part1Input' />
+                    <InputBox part={day.part1} />
+                </>
+            )}
             {day.part2 && day.stars >= 1 && (
                 <>
                     <hr className='my-8' />
@@ -216,8 +221,12 @@ const DayTemplate = ({ day, year, dayNumber }: DayTemplateProps) => {
                         </Link>
                     </div>
                     <div>{day.part2.description}</div>
-                    <hr className='my-8' id='part2Input' />
-                    <InputBox part={day.part2} />
+                    {!day.part2.noSolution && (
+                        <>
+                            <hr className='my-8' id='part2Input' />
+                            <InputBox part={day.part2} />
+                        </>
+                    )}
                 </>
             )}
         </div>
