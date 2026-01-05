@@ -84,4 +84,16 @@ export const part1Description = (<>
 </>);
 
 export const part2Description = (<>
+    <p>Now, you're ready to choose a directory to delete.</p><br />
+    <p>The total disk space available to the filesystem is <Code><Glow>70000000</Glow></Code>. To run the update, you need unused space of at least <Code><Glow>30000000</Glow></Code>. You need to find a directory you can delete that will <Glow>free up enough space</Glow> to run the update.</p><br />
+    <p>In the example above, the total size of the outermost directory (and thus the total amount of used space) is <Code>48381165</Code>; this means that the size of the <Glow>unused</Glow> space must currently be <Code>21618835</Code>, which isn't quite the <Code>30000000</Code> required by the update. Therefore, the update still requires a directory with total size of at least <Code>8381165</Code> to be deleted before it can run.</p><br />
+    <p>To achieve this, you have the following options:</p><br />
+    <List>
+        <li>Delete directory <Code>e</Code>, which would increase unused space by <Code>584</Code>.</li>
+        <li>Delete directory <Code>a</Code>, which would increase unused space by <Code>94853</Code>.</li>
+        <li>Delete directory <Code>d</Code>, which would increase unused space by <Code>24933642</Code>.</li>
+        <li>Delete directory <Code>/</Code>, which would increase unused space by <Code>48381165</Code>.</li>
+    </List><br />
+    <p>Directories <Code>e</Code> and <Code>a</Code> are both too small; deleting them would not free up enough space. However, directories <Code>d</Code> and <Code>/</Code> are both big enough! Between these, choose the <Glow>smallest</Glow>: <Code>d</Code>, increasing unused space by <Code><Glow>24933642</Glow></Code>.</p><br />
+    <p>Find the smallest directory that, if deleted, would free up enough space on the filesystem to run the update. <Glow>What is the total size of that directory?</Glow></p>
 </>);

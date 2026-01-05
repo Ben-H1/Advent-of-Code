@@ -3,8 +3,8 @@ import { part1Description, part2Description } from './descriptions';
 import { inputs } from './inputs';
 import { part1Solution, part2Solution } from './solutions';
 
-export const day7: Day = {
-    title: 'Day 7: No Space Left On Device',
+export const day8: Day = {
+    title: 'Day 8: Treetop Tree House',
     stars: 2,
     part1: {
         description: part1Description,

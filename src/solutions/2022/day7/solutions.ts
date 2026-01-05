@@ -1,64 +1,97 @@
+import { sum } from '@util/math';
 import get from 'lodash.get';
 
-const getDirSizes = (obj: Record<string, any>, parents: string[] = [], dirSizes: Record<string, any> = {}) => {
-    Object.keys(obj).forEach((key) => {
-        if (typeof obj[key] === 'object') {
-            // console.log(`DIR: ${key} | PARENTS: [${parents.join(', ')}]`);
-            if (dirSizes[key] == null) {
-                dirSizes[key] = 0;
-            }
-            getDirSizes(obj[key], [...parents, key], dirSizes);
-        } else {
-            // console.log(`FILE: ${key} | ${obj[key]} | PARENTS: [${parents.join(', ')}]`);
-            parents.forEach(parent => dirSizes[parent] += obj[key]);
-        }
-    });
+type File = number;
 
-    return dirSizes;
-};
+interface Directory {
+    [key: string]: Directory | File;
+}
 
-export const part1Solution = (input: string): string => {
-    const splitInput = input.split('\n');
+const getFilesystem = (input: string): Directory => {
+    const lines = input.split('\n');
 
-    let currentDir = ['/'];
-    const dirs = { '/': {} };
+    let currentDirectory: string[] = ['/'];
+    let filesystem: Directory = { '/': {} };
 
-    splitInput.forEach((line) => {
+    lines.forEach(line => {
         const splitLine = line.split(' ');
 
         if (splitLine[0] === '$') {
             if (splitLine[1] === 'cd') {
-                switch (splitLine[2]) {
-                    case '/': currentDir = ['/']; break;
-                    case '..': currentDir.pop(); break;
-                    default: currentDir.push(splitLine[2]); break;
+                if (splitLine[2] === '/') {
+                    currentDirectory = ['/'];
+                } else if (splitLine[2] === '..') {
+                    currentDirectory.pop();
+                } else {
+                    currentDirectory.push(splitLine[2]);
                 }
-            } else {}
+            }
         } else {
             if (splitLine[0] === 'dir') {
-                const folderName = splitLine[1];
-                if (!get(dirs, currentDir)[folderName]) {
-                    get(dirs, currentDir)[folderName] = {};
+                const directoryName = splitLine[1];
+                const currentDirectoryContent = get(filesystem, currentDirectory);
+                if (!currentDirectoryContent[directoryName]) {
+                    currentDirectoryContent[directoryName] = {};
                 }
             } else {
-                const fileSize = parseInt(splitLine[0]);
                 const fileName = splitLine[1];
-                if (!get(dirs, currentDir)[fileName]) {
-                    get(dirs, currentDir)[fileName] = fileSize;
-                }
+                const fileSize = parseInt(splitLine[0]);
+                const currentDirectoryContent = get(filesystem, currentDirectory);
+                currentDirectoryContent[fileName] = fileSize;
             }
         }
     });
 
-    console.log(dirs);
+    return filesystem;
+};
 
-    const dirSizes = getDirSizes(dirs);
-    console.log(dirSizes);
-    const sum = Object.keys(dirSizes).map(d => dirSizes[d]).filter(s => s <= 100000).reduce((p, c) => p + c, 0);
+const getDirectorySizes = (filesystem: Directory): Record<string, number> => {
+    let sizes: Record<string, number> = {};
 
-    return sum.toString();
+    const getSizes = (filesystem: Directory, path: string[], sizes: Record<string, number>) => {
+        Object.entries(filesystem).forEach(([key, value]) => {
+            if (typeof value === 'object') {
+                getSizes(value, [...path, key], sizes);
+            } else if (typeof value === 'number') {
+                for (let i = 1; i <= path.length; i++) {
+                    const pathSlice = path.slice(0, i);
+                    const pathKey = pathSlice.join('\\');
+
+                    if (!sizes[pathKey]) sizes[pathKey] = 0;
+                    sizes[pathKey] += value;
+                }
+            }
+        });
+    };
+
+    getSizes(filesystem, [], sizes);
+
+    return sizes;
+};
+
+export const part1Solution = (input: string): string => {
+    const filesystem = getFilesystem(input);
+    const directorySizes = getDirectorySizes(filesystem);
+
+    const topDirectorySizes = Object.values(directorySizes).filter(s => s <= 100_000);
+    const topDirectorySizesSum = sum(...topDirectorySizes);
+
+    return topDirectorySizesSum.toString();
 };
 
 export const part2Solution = (input: string): string => {
-    return '';
+    const filesystem = getFilesystem(input);
+    const directorySizes = getDirectorySizes(filesystem);
+
+    const totalDiskSpace = 70_000_000;
+    const requiredDiskSpace = 30_000_000;
+
+    const filesystemSpace = directorySizes['/'];
+    const unusedSpace = totalDiskSpace - filesystemSpace;
+    const spaceToFreeUp = requiredDiskSpace - unusedSpace;
+
+    const deletableDirectorySizes = Object.values(directorySizes).filter(s => s >= spaceToFreeUp).sort((a, b) => a - b);
+    const smallestDeletableDirectorySize = deletableDirectorySizes[0];
+
+    return smallestDeletableDirectorySize.toString();
 };
