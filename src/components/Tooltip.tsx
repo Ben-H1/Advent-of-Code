@@ -21,6 +21,7 @@ const Tooltip = ({ children, tooltipContent, tooltipTempContent, tempTimeMs = 10
                     setTemp(true);
                     setTimeout(() => setTemp(false), tempTimeMs);
                 }}
+                className='h-fit w-fit'
             >
                 {children}
                 <ReactTooltip
