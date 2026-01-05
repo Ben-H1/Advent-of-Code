@@ -8,7 +8,7 @@ type CodeProps = {
 
 const Code = ({ className, children }: CodeProps) => {
     return (
-        <span className={clsx('px-1 py-px mx-px font-mono rounded-md text-aoc-text border-aoc-text w-fit bg-aoc-code border', className)}>
+        <span className={clsx('whitespace-nowrap inline-flex items-center h-[23px] w-fit px-1 pt-px mx-px font-mono rounded-md text-aoc-text border-aoc-text bg-aoc-code border', className)}>
             {children}
         </span>
     );
