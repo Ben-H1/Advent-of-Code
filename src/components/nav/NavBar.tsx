@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import IconButton from '../IconButton';
 import Star from '../Star';
 import NavLink from './NavLink';
+import Glow from '@components/text/Glow';
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -20,6 +21,9 @@ const NavBar = () => {
         currentDay = -1;
         yearIndex = Object.keys(years).length - 1;
     }
+
+    const starCount = years[currentYear].map(d => d.stars).reduce((a, b) => a + b);
+    const maxStars = parseInt(currentYear) >= 2025 ? 24 : 50;
     
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -99,7 +103,7 @@ const NavBar = () => {
                 <Star />
                 {currentYear && (
                     <span className='mx-4'>
-                        Stars: {years[currentYear].map(d => d.stars).reduce((a, b) => a + b)}
+                        Stars: {starCount >= maxStars ? <Glow color='yellow'>{starCount}</Glow> : starCount}
                     </span>
                 )}
                 <Star />
