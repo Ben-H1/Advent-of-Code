@@ -1,4 +1,3 @@
-import { stringify2d } from '@util/array';
 import { sum } from '@util/math';
 
 enum Object {

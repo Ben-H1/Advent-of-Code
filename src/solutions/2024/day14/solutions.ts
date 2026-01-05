@@ -1,4 +1,3 @@
-import { stringify2d } from '@util/array';
 import { product } from '@util/math';
 
 type Coordinate = {
